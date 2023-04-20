@@ -1,0 +1,4454 @@
+Types[0] = Pointer
+Types[1] = LongWord
+Types[2] = Variant
+Types[3] = PAnsiChar
+Types[4] = Currency
+Types[5] = Extended
+Types[6] = Double
+Types[7] = Single
+Types[8] = Int64
+Types[9] = String
+Types[10] = LongWord
+Types[11] = LongInt
+Types[12] = SmallInt
+Types[13] = Word
+Types[14] = ShortInt
+Types[15] = ANYMETHOD = ProcPtr
+Types[16] = String
+Types[17] = UnicodeString
+Types[18] = UnicodeString
+Types[19] = String
+Types[20] = UnicodeString
+Types[21] = WideString
+Types[22] = WideChar
+Types[23] = WideChar
+Types[24] = Char
+Types[25] = Byte
+Types[26] = Word
+Types[27] = LongWord
+Types[28] = BOOLEAN = Byte
+Types[29] = Byte
+Types[30] = TWIZARDFORM = Class
+Types[31] = TMAINFORM = Class
+Types[32] = TUNINSTALLPROGRESSFORM = Class
+Types[33] = TDOWNLOADWIZARDPAGE = Class
+Types[34] = TSTRINGLIST = Class
+Types[35] = !OPENARRAYOFCONST = Pointer[]
+Types[36] = Variant[]
+Types[37] = TMSGBOXTYPE = Byte
+Types[38] = TONDOWNLOADPROGRESS = ProcPtr
+Types[39] = TSETUPMESSAGEID = Word
+Types[40] = TEXECWAIT = Byte
+Types[41] = TARRAYOFSTRING = UnicodeString[]
+Types[42] = TWIZARDPAGE = Class
+Types[43] = TNEWCHECKBOX = Class
+Types[44] = TNEWBUTTON = Class
+Types[45] = TOBJECT = Class
+Types[46] = TNEWSTATICTEXT = Class
+Types[47] = TWIZARDPAGENOTIFYEVENT = ProcPtr
+Types[48] = TWIZARDPAGEBUTTONEVENT = ProcPtr
+Types[49] = TCONTROL = Class
+Types[50] = TCOMPONENT = Class
+Types[51] = TWINCONTROL = Class
+Types[52] = TNEWNOTEBOOKPAGE = Class
+Types[53] = TFONT = Class
+Types[54] = TFONTSTYLE = Byte
+Types[55] = TFONTSTYLES = Set
+Types[56] = TNOTIFYEVENT = ProcPtr
+Types[57] = IDISPATCH = Interface
+Types[58] = !OPENARRAYOFVARIANT = Variant[]
+Types[59] = TWINDOWSVERSION = Record <LongWord,LongWord,LongWord,LongWord,LongWord,Byte,Byte,Word>
+
+Vars[0].Type = TWIZARDFORM = Class
+Vars[1].Type = TMAINFORM = Class
+Vars[2].Type = TUNINSTALLPROGRESSFORM = Class
+Vars[3].Type = BOOLEAN = Byte
+Vars[4].Type = BOOLEAN = Byte
+Vars[5].Type = TDOWNLOADWIZARDPAGE = Class
+Vars[6].Type = TSTRINGLIST = Class
+Vars[7].Type = TWIZARDPAGE = Class
+Vars[8].Type = TNEWCHECKBOX = Class
+Vars[9].Type = BOOLEAN = Byte
+Vars[10].Type = BOOLEAN = Byte
+
+Functions[0] = exported void !MAIN()
+		ret
+
+Functions[1] = exported BOOLEAN ISDOTNETDETECTED(in UnicodeString Arg1,in LongWord Arg2)
+		pushtype UnicodeString ; StackCount = 1
+		pushtype LongWord ; StackCount = 2
+		pushtype LongWord ; StackCount = 3
+		pushtype LongWord ; StackCount = 4
+		pushtype BOOLEAN ; StackCount = 5
+		pushtype BOOLEAN ; StackCount = 6
+		pushtype BOOLEAN ; StackCount = 7
+		pushtype LongInt ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Arg1
+		pushtype UnicodeString ; StackCount = 10
+		assign Var10, ( UnicodeString "v4.5" )
+		pushvar Var8 ; StackCount = 11
+		call POS
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		compare Var7, Var8 == ( LongInt 1 )
+		pop ; StackCount = 7
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_109
+		assign Var1, ( UnicodeString "SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" )
+		assign Var5, ( Byte 1 )
+		jump loc_458
+	loc_109:
+		pushtype BOOLEAN ; StackCount = 7
+		pushtype LongInt ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Arg1
+		pushtype UnicodeString ; StackCount = 10
+		assign Var10, ( UnicodeString "v4.6" )
+		pushvar Var8 ; StackCount = 11
+		call POS
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		compare Var7, Var8 == ( LongInt 1 )
+		pop ; StackCount = 7
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_1f4
+		assign Var1, ( UnicodeString "SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" )
+		assign Var5, ( Byte 1 )
+		jump loc_458
+	loc_1f4:
+		pushtype BOOLEAN ; StackCount = 7
+		pushtype LongInt ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Arg1
+		pushtype UnicodeString ; StackCount = 10
+		assign Var10, ( UnicodeString "v4.7" )
+		pushvar Var8 ; StackCount = 11
+		call POS
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		compare Var7, Var8 == ( LongInt 1 )
+		pop ; StackCount = 7
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_2df
+		assign Var1, ( UnicodeString "SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" )
+		assign Var5, ( Byte 1 )
+		jump loc_458
+	loc_2df:
+		pushtype BOOLEAN ; StackCount = 7
+		pushtype LongInt ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Arg1
+		pushtype UnicodeString ; StackCount = 10
+		assign Var10, ( UnicodeString "v4.8" )
+		pushvar Var8 ; StackCount = 11
+		call POS
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		compare Var7, Var8 == ( LongInt 1 )
+		pop ; StackCount = 7
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_3ca
+		assign Var1, ( UnicodeString "SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" )
+		assign Var5, ( Byte 1 )
+		jump loc_458
+	loc_3ca:
+		pushtype UnicodeString ; StackCount = 7
+		assign Var7, ( UnicodeString "SOFTWARE\Microsoft\NET Framework Setup\NDP\" )
+		calculate Var7 + Arg1
+		assign Var1, Var7
+		pop ; StackCount = 6
+		assign Var5, ( Byte 0 )
+	loc_458:
+		pushtype UnicodeString ; StackCount = 7
+		pushtype UnicodeString ; StackCount = 8
+		assign Var8, ( UnicodeString ".Net Framework registry key for check: " )
+		calculate Var8 + Var1
+		assign Var7, Var8
+		pop ; StackCount = 7
+		call LOG
+		pop ; StackCount = 6
+		pushtype BOOLEAN ; StackCount = 7
+		pushtype LongInt ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Arg1
+		pushtype UnicodeString ; StackCount = 10
+		assign Var10, ( UnicodeString "v3.0" )
+		pushvar Var8 ; StackCount = 11
+		call POS
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		compare Var7, Var8 == ( LongInt 1 )
+		pop ; StackCount = 7
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_5ea
+		pushtype Pointer ; StackCount = 7
+		setptr Var7, Var2
+		pushtype UnicodeString ; StackCount = 8
+		assign Var8, ( UnicodeString "InstallSuccess" )
+		pushtype UnicodeString ; StackCount = 9
+		pushtype UnicodeString ; StackCount = 10
+		assign Var10, Var1
+		calculate Var10 + ( UnicodeString "\Setup" )
+		assign Var9, Var10
+		pop ; StackCount = 9
+		pushtype LongInt ; StackCount = 10
+		assign Var10, ( LongInt -2147483646 )
+		pushvar Var6 ; StackCount = 11
+		call REGQUERYDWORDVALUE
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		jump loc_650
+	loc_5ea:
+		pushtype Pointer ; StackCount = 7
+		setptr Var7, Var2
+		pushtype UnicodeString ; StackCount = 8
+		assign Var8, ( UnicodeString "Install" )
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Var1
+		pushtype LongInt ; StackCount = 10
+		assign Var10, ( LongInt -2147483646 )
+		pushvar Var6 ; StackCount = 11
+		call REGQUERYDWORDVALUE
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+	loc_650:
+		pushtype BOOLEAN ; StackCount = 7
+		pushtype LongInt ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Arg1
+		pushtype UnicodeString ; StackCount = 10
+		assign Var10, ( UnicodeString "v4" )
+		pushvar Var8 ; StackCount = 11
+		call POS
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		compare Var7, Var8 == ( LongInt 1 )
+		pop ; StackCount = 7
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_73e
+		jumpfalse Var6, loc_739
+		pushtype BOOLEAN ; StackCount = 7
+		pushtype Pointer ; StackCount = 8
+		setptr Var8, Var4
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, ( UnicodeString "Servicing" )
+		pushtype UnicodeString ; StackCount = 10
+		assign Var10, Var1
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt -2147483646 )
+		pushvar Var7 ; StackCount = 12
+		call REGQUERYDWORDVALUE
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		calculate Var6 & Var7
+		pop ; StackCount = 6
+	loc_739:
+		jump loc_7b6
+	loc_73e:
+		jumpfalse Var6, loc_7b6
+		pushtype BOOLEAN ; StackCount = 7
+		pushtype Pointer ; StackCount = 8
+		setptr Var8, Var4
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, ( UnicodeString "SP" )
+		pushtype UnicodeString ; StackCount = 10
+		assign Var10, Var1
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt -2147483646 )
+		pushvar Var7 ; StackCount = 12
+		call REGQUERYDWORDVALUE
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		calculate Var6 & Var7
+		pop ; StackCount = 6
+	loc_7b6:
+		pushtype BOOLEAN ; StackCount = 7
+		assign Var7, Var5
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_c59
+		jumpfalse Var6, loc_855
+		pushtype BOOLEAN ; StackCount = 7
+		pushtype Pointer ; StackCount = 8
+		setptr Var8, Var3
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, ( UnicodeString "Release" )
+		pushtype UnicodeString ; StackCount = 10
+		assign Var10, Var1
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt -2147483646 )
+		pushvar Var7 ; StackCount = 12
+		call REGQUERYDWORDVALUE
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		calculate Var6 & Var7
+		pop ; StackCount = 6
+	loc_855:
+		pushtype UnicodeString ; StackCount = 7
+		pushtype UnicodeString ; StackCount = 8
+		assign Var8, ( UnicodeString ".Net v4.5 release version: " )
+		pushtype UnicodeString ; StackCount = 9
+		pushtype Int64 ; StackCount = 10
+		assign Var10, Var3
+		pushvar Var9 ; StackCount = 11
+		call INTTOSTR
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		calculate Var8 + Var9
+		pop ; StackCount = 8
+		assign Var7, Var8
+		pop ; StackCount = 7
+		call LOG
+		pop ; StackCount = 6
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Arg1 == ( UnicodeString "v4.5" )
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_945
+		jumpfalse Var6, loc_945
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Var3 >= ( LongInt 378389 )
+		calculate Var6 & Var7
+		pop ; StackCount = 6
+	loc_945:
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Arg1 == ( UnicodeString "v4.5.1" )
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_9a9
+		jumpfalse Var6, loc_9a9
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Var3 >= ( LongInt 378675 )
+		calculate Var6 & Var7
+		pop ; StackCount = 6
+	loc_9a9:
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Arg1 == ( UnicodeString "v4.5.2" )
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_a0d
+		jumpfalse Var6, loc_a0d
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Var3 >= ( LongInt 379893 )
+		calculate Var6 & Var7
+		pop ; StackCount = 6
+	loc_a0d:
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Arg1 == ( UnicodeString "v4.6" )
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_a6d
+		jumpfalse Var6, loc_a6d
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Var3 >= ( LongInt 393295 )
+		calculate Var6 & Var7
+		pop ; StackCount = 6
+	loc_a6d:
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Arg1 == ( UnicodeString "v4.6.1" )
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_ad1
+		jumpfalse Var6, loc_ad1
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Var3 >= ( LongInt 394254 )
+		calculate Var6 & Var7
+		pop ; StackCount = 6
+	loc_ad1:
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Arg1 == ( UnicodeString "v4.7" )
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_b31
+		jumpfalse Var6, loc_b31
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Var3 >= ( LongInt 460798 )
+		calculate Var6 & Var7
+		pop ; StackCount = 6
+	loc_b31:
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Arg1 == ( UnicodeString "v4.7.1" )
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_b95
+		jumpfalse Var6, loc_b95
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Var3 >= ( LongInt 461308 )
+		calculate Var6 & Var7
+		pop ; StackCount = 6
+	loc_b95:
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Arg1 == ( UnicodeString "v4.7.2" )
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_bf9
+		jumpfalse Var6, loc_bf9
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Var3 >= ( LongInt 461808 )
+		calculate Var6 & Var7
+		pop ; StackCount = 6
+	loc_bf9:
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Arg1 == ( UnicodeString "v4.8" )
+		setflag not Var7
+		pop ; StackCount = 6
+		jumpflag loc_c59
+		jumpfalse Var6, loc_c59
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Var3 >= ( LongInt 528040 )
+		calculate Var6 & Var7
+		pop ; StackCount = 6
+	loc_c59:
+		assign RetVal, Var6
+		jumpfalse RetVal, loc_c95
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Var2 == ( LongInt 1 )
+		calculate RetVal & Var7
+		pop ; StackCount = 6
+	loc_c95:
+		jumpfalse RetVal, loc_cc2
+		pushtype BOOLEAN ; StackCount = 7
+		compare Var7, Var4 >= Arg2
+		calculate RetVal & Var7
+		pop ; StackCount = 6
+	loc_cc2:
+		ret
+
+Functions[2] = external returnsval POS(out Arg1)
+
+Functions[3] = external void LOG(out Arg1)
+
+Functions[4] = external returnsval REGQUERYDWORDVALUE(out Arg1,out Arg2)
+
+Functions[5] = external returnsval INTTOSTR(out Arg1)
+
+Functions[6] = exported BOOLEAN ISWEBVIEW2DETECTED()
+		pushtype UnicodeString ; StackCount = 1
+		pushtype UnicodeString ; StackCount = 2
+		pushtype BOOLEAN ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		pushvar Var4 ; StackCount = 5
+		call ISWIN64
+		pop ; StackCount = 4
+		setflag not Var4
+		pop ; StackCount = 3
+		jumpflag loc_f1
+		assign Var1, ( UnicodeString "SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}" )
+		jump loc_198
+	loc_f1:
+		assign Var1, ( UnicodeString "SOFTWARE\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}" )
+	loc_198:
+		pushtype UnicodeString ; StackCount = 4
+		pushtype UnicodeString ; StackCount = 5
+		assign Var5, ( UnicodeString "WebView2 registry key for check: " )
+		calculate Var5 + Var1
+		assign Var4, Var5
+		pop ; StackCount = 4
+		call LOG
+		pop ; StackCount = 3
+		assign Var3, ( Byte 0 )
+		pushtype BOOLEAN ; StackCount = 4
+		pushtype Pointer ; StackCount = 5
+		setptr Var5, Var2
+		pushtype UnicodeString ; StackCount = 6
+		assign Var6, ( UnicodeString "pv" )
+		pushtype UnicodeString ; StackCount = 7
+		assign Var7, Var1
+		pushtype LongInt ; StackCount = 8
+		assign Var8, ( LongInt -2147483646 )
+		pushvar Var4 ; StackCount = 9
+		call REGQUERYSTRINGVALUE
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		setflag not Var4
+		pop ; StackCount = 3
+		jumpflag loc_2f8
+		pushtype BOOLEAN ; StackCount = 4
+		pushtype Variant ; StackCount = 5
+		assign Var5, Var2
+		pushvar Var4 ; StackCount = 6
+		call VARISNULL
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		logicalnot Var4
+		setflag not Var4
+		pop ; StackCount = 3
+		jumpflag loc_2f8
+		pushtype LongInt ; StackCount = 4
+		pushtype UnicodeString ; StackCount = 5
+		assign Var5, Var2
+		pushvar Var4 ; StackCount = 6
+		call LENGTH
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		compare Var3, Var4 > ( LongInt 0 )
+		pop ; StackCount = 3
+	loc_2f8:
+		assign RetVal, Var3
+		ret
+
+Functions[7] = external returnsval ISWIN64()
+
+Functions[8] = external returnsval REGQUERYSTRINGVALUE(out Arg1,out Arg2)
+
+Functions[9] = external returnsval VARISNULL(out Arg1)
+
+Functions[10] = external returnsval LENGTH()
+
+Functions[11] = exported BOOLEAN ONDOWNLOADPROGRESS(in UnicodeString Arg1,in UnicodeString Arg2,in Int64 Arg3,in Int64 Arg4)
+		pushtype BOOLEAN ; StackCount = 1
+		compare Var1, Arg3 == Arg4
+		setflag not Var1
+		pop ; StackCount = 0
+		jumpflag loc_e8
+		pushtype UnicodeString ; StackCount = 1
+		pushtype !OPENARRAYOFCONST ; StackCount = 2
+		pushtype !OPENARRAYOFCONST ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		assign Var4, ( LongInt 1 )
+		pushvar Var3 ; StackCount = 5
+		call SETARRAYLENGTH
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		setcopypointer Var3[0], Arg2
+		assign Var2, Var3
+		pop ; StackCount = 2
+		pushtype UnicodeString ; StackCount = 3
+		assign Var3, ( UnicodeString "Successfully downloaded file to {tmp}: %s" )
+		pushvar Var1 ; StackCount = 4
+		call FORMAT
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+		call LOG
+		pop ; StackCount = 0
+	loc_e8:
+		assign RetVal, ( Byte 1 )
+		ret
+
+Functions[12] = external returnsval FORMAT(out Arg1)
+
+Functions[13] = external void SETARRAYLENGTH()
+
+Functions[14] = exported BOOLEAN CHECKFORDEPENDENCIES()
+		assign RetVal, ( Byte 1 )
+		pushtype LongWord ; StackCount = 1
+		assign Var1, ( LongWord 34 )
+		pushvar Global6 ; StackCount = 2
+		call TSTRINGLIST->CREATE
+		pop ; StackCount = 1
+		pop ; StackCount = 0
+		pushtype LongWord ; StackCount = 1
+		assign Var1, ( LongInt 0 )
+		pushtype UnicodeString ; StackCount = 2
+		assign Var2, ( UnicodeString "v4.8" )
+		pushvar Global3 ; StackCount = 3
+		call ISDOTNETDETECTED
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+		pop ; StackCount = 0
+		pushtype BOOLEAN ; StackCount = 1
+		assign Var1, Global3
+		setflag not Var1
+		pop ; StackCount = 0
+		jumpflag loc_eb
+		pushtype UnicodeString ; StackCount = 1
+		assign Var1, ( UnicodeString ".Net Framework seems to be present" )
+		call LOG
+		pop ; StackCount = 0
+		jump loc_2e9
+	loc_eb:
+		pushtype UnicodeString ; StackCount = 1
+		assign Var1, ( UnicodeString ".Net Framework needs to be installed" )
+		call LOG
+		pop ; StackCount = 0
+		pushtype LongInt ; StackCount = 1
+		pushtype UnicodeString ; StackCount = 2
+		assign Var2, ( UnicodeString "Microsoft .NET Framework 4.8" )
+		pushtype TSTRINGLIST ; StackCount = 3
+		assign Var3, Global6
+		pushvar Var1 ; StackCount = 4
+		call TSTRINGS->ADD
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+		pop ; StackCount = 0
+		pushtype BOOLEAN ; StackCount = 1
+		pushvar Var1 ; StackCount = 2
+		call ISADMININSTALLMODE
+		pop ; StackCount = 1
+		logicalnot Var1
+		setflag not Var1
+		pop ; StackCount = 0
+		jumpflag loc_2e9
+		pushtype LongInt ; StackCount = 1
+		pushtype LongInt ; StackCount = 2
+		assign Var2, ( LongInt 0 )
+		pushtype TMSGBOXTYPE ; StackCount = 3
+		assign Var3, ( Byte 0 )
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "This program needs the Microsoft .NET Framework 4.8 to be installed by an Administrator" )
+		pushvar Var1 ; StackCount = 5
+		call MSGBOX
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+		pop ; StackCount = 0
+		assign RetVal, ( Byte 0 )
+	loc_2e9:
+		pushvar Global4 ; StackCount = 1
+		call ISWEBVIEW2DETECTED
+		pop ; StackCount = 0
+		pushtype BOOLEAN ; StackCount = 1
+		assign Var1, Global4
+		setflag not Var1
+		pop ; StackCount = 0
+		jumpflag loc_369
+		pushtype UnicodeString ; StackCount = 1
+		assign Var1, ( UnicodeString "WebView2 seems to be present" )
+		call LOG
+		pop ; StackCount = 0
+		jump loc_553
+	loc_369:
+		pushtype UnicodeString ; StackCount = 1
+		assign Var1, ( UnicodeString "WebView2 needs to be installed" )
+		call LOG
+		pop ; StackCount = 0
+		pushtype LongInt ; StackCount = 1
+		pushtype UnicodeString ; StackCount = 2
+		assign Var2, ( UnicodeString "Microsoft WebView2 Runtime" )
+		pushtype TSTRINGLIST ; StackCount = 3
+		assign Var3, Global6
+		pushvar Var1 ; StackCount = 4
+		call TSTRINGS->ADD
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+		pop ; StackCount = 0
+		pushtype BOOLEAN ; StackCount = 1
+		pushvar Var1 ; StackCount = 2
+		call ISADMININSTALLMODE
+		pop ; StackCount = 1
+		logicalnot Var1
+		setflag not Var1
+		pop ; StackCount = 0
+		jumpflag loc_553
+		pushtype LongInt ; StackCount = 1
+		pushtype LongInt ; StackCount = 2
+		assign Var2, ( LongInt 0 )
+		pushtype TMSGBOXTYPE ; StackCount = 3
+		assign Var3, ( Byte 0 )
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "This program needs the Microsoft WebView2 Runtime to be installed by an Administrator" )
+		pushvar Var1 ; StackCount = 5
+		call MSGBOX
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+		pop ; StackCount = 0
+		assign RetVal, ( Byte 0 )
+	loc_553:
+		ret
+
+Functions[15] = external register returnsval TSTRINGLIST->CREATE()
+
+Functions[16] = external register returnsval TSTRINGS->ADD(out Arg1)
+
+Functions[17] = external returnsval ISADMININSTALLMODE()
+
+Functions[18] = external returnsval MSGBOX(out Arg1,out Arg2)
+
+Functions[19] = exported void ADDDEPENDENCIESTODOWNLOADPAGE()
+		pushtype BOOLEAN ; StackCount = 1
+		assign Var1, Global3
+		logicalnot Var1
+		jumptrue Var1, loc_43
+		pushtype BOOLEAN ; StackCount = 2
+		assign Var2, Global4
+		logicalnot Var2
+		calculate Var1 | Var2
+		pop ; StackCount = 1
+	loc_43:
+		setflag not Var1
+		pop ; StackCount = 0
+		jumpflag loc_389
+		pushtype TONDOWNLOADPROGRESS ; StackCount = 1
+		assign Var1, ( ProcPtr ONDOWNLOADPROGRESS )
+		pushtype UnicodeString ; StackCount = 2
+		pushtype TSETUPMESSAGEID ; StackCount = 3
+		assign Var3, ( Word 152 )
+		pushvar Var2 ; StackCount = 4
+		call SETUPMESSAGE
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pushtype UnicodeString ; StackCount = 3
+		pushtype TSETUPMESSAGEID ; StackCount = 4
+		assign Var4, ( Word 252 )
+		pushvar Var3 ; StackCount = 5
+		call SETUPMESSAGE
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushvar Global5 ; StackCount = 4
+		call CREATEDOWNLOADPAGE
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+		pop ; StackCount = 0
+		pushtype TDOWNLOADWIZARDPAGE ; StackCount = 1
+		assign Var1, Global5
+		call TDOWNLOADWIZARDPAGE->CLEAR
+		pop ; StackCount = 0
+		pushtype BOOLEAN ; StackCount = 1
+		assign Var1, Global3
+		logicalnot Var1
+		setflag not Var1
+		pop ; StackCount = 0
+		jumpflag loc_275
+		pushtype UnicodeString ; StackCount = 1
+		assign Var1, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 2
+		assign Var2, ( UnicodeString "dotnetfx.exe" )
+		pushtype UnicodeString ; StackCount = 3
+		assign Var3, ( UnicodeString "http://download.visualstudio.microsoft.com/download/pr/014120d7-d689-4305-befd-3cb711108212/1f81f3962f75eff5d83a60abd3a3ec7b/ndp48-web.exe" )
+		pushtype TDOWNLOADWIZARDPAGE ; StackCount = 4
+		assign Var4, Global5
+		call TDOWNLOADWIZARDPAGE->ADD
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+		pop ; StackCount = 0
+	loc_275:
+		pushtype BOOLEAN ; StackCount = 1
+		assign Var1, Global4
+		logicalnot Var1
+		setflag not Var1
+		pop ; StackCount = 0
+		jumpflag loc_389
+		pushtype UnicodeString ; StackCount = 1
+		assign Var1, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 2
+		assign Var2, ( UnicodeString "MicrosoftEdgeWebview2Setup.exe" )
+		pushtype UnicodeString ; StackCount = 3
+		assign Var3, ( UnicodeString "http://go.microsoft.com/fwlink/p/?LinkId=2124703" )
+		pushtype TDOWNLOADWIZARDPAGE ; StackCount = 4
+		assign Var4, Global5
+		call TDOWNLOADWIZARDPAGE->ADD
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+		pop ; StackCount = 0
+	loc_389:
+		ret
+
+Functions[20] = external returnsval CREATEDOWNLOADPAGE(out Arg1,out Arg2)
+
+Functions[21] = external returnsval SETUPMESSAGE(out Arg1)
+
+Functions[22] = external register void TDOWNLOADWIZARDPAGE->CLEAR()
+
+Functions[23] = external register void TDOWNLOADWIZARDPAGE->ADD(out Arg1,out Arg2)
+
+Functions[24] = exported UnicodeString GETDEPENDENCYREADYTEXT()
+		pushtype UnicodeString ; StackCount = 1
+		pushtype LongInt ; StackCount = 2
+		pushtype BOOLEAN ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		pushtype TSTRINGLIST ; StackCount = 5
+		assign Var5, Global6
+		pushvar Var4 ; StackCount = 6
+		call TSTRINGS->COUNT
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		compare Var3, Var4 > ( LongInt 0 )
+		pop ; StackCount = 3
+		setflag not Var3
+		pop ; StackCount = 2
+		jumpflag loc_236
+		pushtype UnicodeString ; StackCount = 3
+		assign Var3, Var1
+		calculate Var3 + ( UnicodeString "Dependencies that will be automatically downloaded and installed:" )
+		calculate Var3 + ( String "
+" )
+		assign Var1, Var3
+		pop ; StackCount = 2
+		assign Var2, ( LongInt 0 )
+		pushtype BOOLEAN ; StackCount = 3
+	loc_128:
+		pushtype LongInt ; StackCount = 4
+		pushtype TSTRINGLIST ; StackCount = 5
+		assign Var5, Global6
+		pushvar Var4 ; StackCount = 6
+		call TSTRINGS->COUNT
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		calculate Var4 - ( LongInt 1 )
+		compare Var3, Var2 <= Var4
+		pop ; StackCount = 3
+		jumpfalse Var3, loc_207
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, Var1
+		calculate Var4 + ( UnicodeString "    " )
+		pushtype UnicodeString ; StackCount = 5
+		pushtype LongInt ; StackCount = 6
+		assign Var6, Var2
+		pushtype TSTRINGLIST ; StackCount = 7
+		assign Var7, Global6
+		pushvar Var5 ; StackCount = 8
+		call TSTRINGS->STRINGS
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		calculate Var4 + Var5
+		pop ; StackCount = 4
+		calculate Var4 + ( String "
+" )
+		assign Var1, Var4
+		pop ; StackCount = 3
+		inc Var2
+		jump loc_128
+	loc_207:
+		pop ; StackCount = 2
+		pushtype UnicodeString ; StackCount = 3
+		assign Var3, Var1
+		calculate Var3 + ( String "
+" )
+		assign Var1, Var3
+		pop ; StackCount = 2
+	loc_236:
+		assign RetVal, Var1
+		ret
+
+Functions[25] = external pascal void TSTRINGS->COUNT(out Arg1)
+
+Functions[26] = external cdecl void TSTRINGS->STRINGS(out Arg1)
+
+Functions[27] = exported BOOLEAN SHOWDEPENDENCYDOWNLOADPAGEANDINSTALL()
+		pushtype LongInt ; StackCount = 1
+		assign RetVal, ( Byte 1 )
+		pushtype BOOLEAN ; StackCount = 2
+		assign Var2, Global3
+		logicalnot Var2
+		jumptrue Var2, loc_54
+		pushtype BOOLEAN ; StackCount = 3
+		assign Var3, Global4
+		logicalnot Var3
+		calculate Var2 | Var3
+		pop ; StackCount = 2
+	loc_54:
+		setflag not Var2
+		pop ; StackCount = 1
+		jumpflag loc_471
+		pushtype TDOWNLOADWIZARDPAGE ; StackCount = 2
+		assign Var2, Global5
+		call TDOWNLOADWIZARDPAGE->SHOW
+		pop ; StackCount = 1
+		pusheh 0x127, 0xffffffff, 0xffffffff, 0x13f
+		pusheh 0xffffffff, 0x25, 0xffffffff, 0x114
+		pushtype Int64 ; StackCount = 2
+		pushtype TDOWNLOADWIZARDPAGE ; StackCount = 3
+		assign Var3, Global5
+		pushvar Var2 ; StackCount = 4
+		call TDOWNLOADWIZARDPAGE->DOWNLOAD
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+		popeh 0x0
+		pushtype BOOLEAN ; StackCount = 2
+		pushtype TDOWNLOADWIZARDPAGE ; StackCount = 3
+		assign Var3, Global5
+		pushvar Var2 ; StackCount = 4
+		call TDOWNLOADWIZARDPAGE->ABORTEDBYUSER
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		setflag not Var2
+		pop ; StackCount = 1
+		jumpflag loc_12c
+		pushtype UnicodeString ; StackCount = 2
+		assign Var2, ( UnicodeString "Aborted by user." )
+		call LOG
+		pop ; StackCount = 1
+		jump loc_19e
+	loc_12c:
+		pushtype LongInt ; StackCount = 2
+		pushtype LongInt ; StackCount = 3
+		assign Var3, ( LongInt 1 )
+		pushtype LongInt ; StackCount = 4
+		assign Var4, ( LongInt 0 )
+		pushtype TMSGBOXTYPE ; StackCount = 5
+		assign Var5, ( Byte 3 )
+		pushtype UnicodeString ; StackCount = 6
+		pushtype UnicodeString ; StackCount = 7
+		pushvar Var7 ; StackCount = 8
+		call GETEXCEPTIONMESSAGE
+		pop ; StackCount = 7
+		pushvar Var6 ; StackCount = 8
+		call ADDPERIOD
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pushvar Var2 ; StackCount = 7
+		call SUPPRESSIBLEMSGBOX
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+	loc_19e:
+		assign RetVal, ( Byte 0 )
+		ret
+		popeh 0x2
+		popeh 0x0
+		pushtype TDOWNLOADWIZARDPAGE ; StackCount = 2
+		assign Var2, Global5
+		call TOUTPUTPROGRESSWIZARDPAGE->HIDE
+		pop ; StackCount = 1
+		popeh 0x1
+		pushtype BOOLEAN ; StackCount = 2
+		assign Var2, Global3
+		logicalnot Var2
+		setflag not Var2
+		pop ; StackCount = 1
+		jumpflag loc_301
+		pushtype BOOLEAN ; StackCount = 2
+		pushtype Pointer ; StackCount = 3
+		setptr Var3, Var1
+		pushtype TEXECWAIT ; StackCount = 4
+		assign Var4, ( Byte 1 )
+		pushtype LongInt ; StackCount = 5
+		assign Var5, ( LongInt 1 )
+		pushtype UnicodeString ; StackCount = 6
+		assign Var6, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 7
+		assign Var7, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, ( UnicodeString "{tmp}\dotnetfx.exe" )
+		pushvar Var8 ; StackCount = 10
+		call EXPANDCONSTANT
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		pushvar Var2 ; StackCount = 9
+		call EXEC
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		setflag not Var2
+		pop ; StackCount = 1
+		jumpflag loc_2f4
+		pushtype BOOLEAN ; StackCount = 2
+		compare Var2, Var1 == ( LongInt 0 )
+		logicalnot Var2
+		setflag not Var2
+		pop ; StackCount = 1
+		jumpflag loc_2ef
+		assign RetVal, ( Byte 0 )
+		ret
+	loc_2ef:
+		jump loc_301
+	loc_2f4:
+		assign RetVal, ( Byte 0 )
+		ret
+	loc_301:
+		pushtype BOOLEAN ; StackCount = 2
+		assign Var2, Global4
+		logicalnot Var2
+		setflag not Var2
+		pop ; StackCount = 1
+		jumpflag loc_471
+		pushtype BOOLEAN ; StackCount = 2
+		pushtype Pointer ; StackCount = 3
+		setptr Var3, Var1
+		pushtype TEXECWAIT ; StackCount = 4
+		assign Var4, ( Byte 1 )
+		pushtype LongInt ; StackCount = 5
+		assign Var5, ( LongInt 1 )
+		pushtype UnicodeString ; StackCount = 6
+		assign Var6, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 7
+		assign Var7, ( UnicodeString " /install" )
+		pushtype UnicodeString ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, ( UnicodeString "{tmp}\MicrosoftEdgeWebview2Setup.exe" )
+		pushvar Var8 ; StackCount = 10
+		call EXPANDCONSTANT
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		pushvar Var2 ; StackCount = 9
+		call EXEC
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		setflag not Var2
+		pop ; StackCount = 1
+		jumpflag loc_464
+		pushtype BOOLEAN ; StackCount = 2
+		compare Var2, Var1 == ( LongInt 0 )
+		logicalnot Var2
+		setflag not Var2
+		pop ; StackCount = 1
+		jumpflag loc_45f
+		assign RetVal, ( Byte 0 )
+		ret
+	loc_45f:
+		jump loc_471
+	loc_464:
+		assign RetVal, ( Byte 0 )
+		ret
+	loc_471:
+		ret
+
+Functions[28] = external register void TDOWNLOADWIZARDPAGE->SHOW()
+
+Functions[29] = external register returnsval TDOWNLOADWIZARDPAGE->DOWNLOAD()
+
+Functions[30] = external pascal void TDOWNLOADWIZARDPAGE->ABORTEDBYUSER(out Arg1)
+
+Functions[31] = external returnsval SUPPRESSIBLEMSGBOX(out Arg1,out Arg2)
+
+Functions[32] = external returnsval ADDPERIOD(out Arg1)
+
+Functions[33] = external returnsval GETEXCEPTIONMESSAGE()
+
+Functions[34] = external register void TOUTPUTPROGRESSWIZARDPAGE->HIDE()
+
+Functions[35] = external returnsval EXEC(out Arg1,out Arg2,out Arg3)
+
+Functions[36] = external returnsval EXPANDCONSTANT(out Arg1)
+
+Functions[37] = exported BOOLEAN UNINSTALLINSTALLSHIELDVERSIONS()
+		pushtype LongInt ; StackCount = 1
+		pushtype UnicodeString ; StackCount = 2
+		pushtype LongInt ; StackCount = 3
+		pushtype TARRAYOFSTRING ; StackCount = 4
+		pushtype UnicodeString ; StackCount = 5
+		pushtype UnicodeString ; StackCount = 6
+		pushtype LongInt ; StackCount = 7
+		assign RetVal, ( Byte 1 )
+		pusheh 0xffffffff, 0xd70, 0xffffffff, 0xd7e
+		assign Var7, ( LongInt -2147483646 )
+		pushtype BOOLEAN ; StackCount = 8
+		pushvar Var8 ; StackCount = 9
+		call ISWIN64
+		pop ; StackCount = 8
+		setflag not Var8
+		pop ; StackCount = 7
+		jumpflag loc_7c
+		assign Var7, ( LongInt -2113929214 )
+	loc_7c:
+		pushtype BOOLEAN ; StackCount = 8
+		pushtype Pointer ; StackCount = 9
+		setptr Var9, Var4
+		pushtype UnicodeString ; StackCount = 10
+		assign Var10, ( UnicodeString "SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UpgradeCodes\NOTAPPLICABLE" )
+		pushtype LongInt ; StackCount = 11
+		assign Var11, Var7
+		pushvar Var8 ; StackCount = 12
+		call REGGETVALUENAMES
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		setflag not Var8
+		pop ; StackCount = 7
+		jumpflag loc_dae
+		assign Var1, ( LongInt 0 )
+		pushtype BOOLEAN ; StackCount = 8
+	loc_181:
+		pushtype LongInt ; StackCount = 9
+		pushtype TARRAYOFSTRING ; StackCount = 10
+		assign Var10, Var4
+		pushvar Var9 ; StackCount = 11
+		call GETARRAYLENGTH
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		calculate Var9 - ( LongInt 1 )
+		compare Var8, Var1 <= Var9
+		pop ; StackCount = 8
+		jumpfalse Var8, loc_dad
+		assign Var5, Var4[Var1]
+		assign Var6, ( WideChar '{' )
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Var6
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 8 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 7 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 6 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 5 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 4 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 3 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 2 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 1 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		assign Var6, Var9
+		pop ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Var6
+		calculate Var9 + ( WideChar '-' )
+		assign Var6, Var9
+		pop ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Var6
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 12 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 11 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 10 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 9 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		assign Var6, Var9
+		pop ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Var6
+		calculate Var9 + ( WideChar '-' )
+		assign Var6, Var9
+		pop ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Var6
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 16 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 15 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 14 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 13 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		assign Var6, Var9
+		pop ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Var6
+		calculate Var9 + ( WideChar '-' )
+		assign Var6, Var9
+		pop ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Var6
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 18 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 17 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 20 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 19 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		assign Var6, Var9
+		pop ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Var6
+		calculate Var9 + ( WideChar '-' )
+		assign Var6, Var9
+		pop ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Var6
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 22 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 21 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 24 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 23 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 26 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 25 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 28 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 27 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 30 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 29 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 32 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		pushtype WideChar ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 31 )
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var5
+		pushvar Var10 ; StackCount = 13
+		call WSTRGET
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		calculate Var9 + Var10
+		pop ; StackCount = 9
+		assign Var6, Var9
+		pop ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, Var6
+		calculate Var9 + ( WideChar '}' )
+		assign Var6, Var9
+		pop ; StackCount = 8
+		pushtype BOOLEAN ; StackCount = 9
+		pushtype Pointer ; StackCount = 10
+		setptr Var10, Var2
+		pushtype UnicodeString ; StackCount = 11
+		assign Var11, ( UnicodeString "UninstallString" )
+		pushtype UnicodeString ; StackCount = 12
+		pushtype UnicodeString ; StackCount = 13
+		assign Var13, ( UnicodeString "Software\Microsoft\Windows\CurrentVersion\Uninstall\" )
+		calculate Var13 + Var6
+		assign Var12, Var13
+		pop ; StackCount = 12
+		pushtype LongInt ; StackCount = 13
+		assign Var13, ( LongInt -2147483646 )
+		pushvar Var9 ; StackCount = 14
+		call REGQUERYSTRINGVALUE
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		setflag not Var9
+		pop ; StackCount = 8
+		jumpflag loc_da2
+		pushtype BOOLEAN ; StackCount = 9
+		pushtype Pointer ; StackCount = 10
+		setptr Var10, Var3
+		pushtype TEXECWAIT ; StackCount = 11
+		assign Var11, ( Byte 1 )
+		pushtype LongInt ; StackCount = 12
+		assign Var12, ( LongInt 5 )
+		pushtype UnicodeString ; StackCount = 13
+		assign Var13, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 14
+		pushtype UnicodeString ; StackCount = 15
+		assign Var15, ( UnicodeString "/qn /x" )
+		calculate Var15 + Var6
+		assign Var14, Var15
+		pop ; StackCount = 14
+		pushtype UnicodeString ; StackCount = 15
+		assign Var15, ( UnicodeString "MsiExec.exe" )
+		pushvar Var9 ; StackCount = 16
+		call EXEC
+		pop ; StackCount = 15
+		pop ; StackCount = 14
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+	loc_da2:
+		inc Var1
+		jump loc_181
+	loc_dad:
+		pop ; StackCount = 7
+	loc_dae:
+		popeh 0x0
+		assign RetVal, ( Byte 0 )
+		popeh 0x2
+		ret
+
+Functions[38] = external returnsval REGGETVALUENAMES(out Arg1,in Arg2)
+
+Functions[39] = external returnsval GETARRAYLENGTH()
+
+Functions[40] = external returnsval WSTRGET(in Arg1)
+
+Functions[41] = exported BOOLEAN UNINSTALLINNOSETUPVERSIONS()
+		pushtype UnicodeString ; StackCount = 1
+		pushtype LongInt ; StackCount = 2
+		assign RetVal, ( Byte 1 )
+		pusheh 0xffffffff, 0x1b7, 0xffffffff, 0x1c5
+		pushtype BOOLEAN ; StackCount = 3
+		pushtype Pointer ; StackCount = 4
+		setptr Var4, Var1
+		pushtype UnicodeString ; StackCount = 5
+		assign Var5, ( UnicodeString "UnInstallString" )
+		pushtype UnicodeString ; StackCount = 6
+		assign Var6, ( UnicodeString "Software\Microsoft\Windows\CurrentVersion\Uninstall\LIGHTHOUSE_is1" )
+		pushtype LongInt ; StackCount = 7
+		assign Var7, ( LongInt -2147483646 )
+		pushvar Var3 ; StackCount = 8
+		call REGQUERYSTRINGVALUE
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		setflag not Var3
+		pop ; StackCount = 2
+		jumpflag loc_1dc
+		pushtype BOOLEAN ; StackCount = 3
+		pushtype Pointer ; StackCount = 4
+		setptr Var4, Var2
+		pushtype TEXECWAIT ; StackCount = 5
+		assign Var5, ( Byte 1 )
+		pushtype LongInt ; StackCount = 6
+		assign Var6, ( LongInt 5 )
+		pushtype UnicodeString ; StackCount = 7
+		assign Var7, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 8
+		assign Var8, ( UnicodeString "/silent" )
+		pushtype UnicodeString ; StackCount = 9
+		pushtype UnicodeString ; StackCount = 10
+		assign Var10, Var1
+		pushvar Var9 ; StackCount = 11
+		call REMOVEQUOTES
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		pushvar Var3 ; StackCount = 10
+		call EXEC
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+	loc_1dc:
+		popeh 0x0
+		assign RetVal, ( Byte 0 )
+		popeh 0x2
+		ret
+
+Functions[42] = external returnsval REMOVEQUOTES(out Arg1)
+
+Functions[43] = exported void INSTALLVCRUNTIME(in UnicodeString Arg1)
+		pushtype LongInt ; StackCount = 1
+		pushtype UnicodeString ; StackCount = 2
+		pushtype UnicodeString ; StackCount = 3
+		assign Var3, Arg1
+		pushvar Var2 ; StackCount = 4
+		call EXPANDCONSTANT
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pushtype BOOLEAN ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		pushtype Pointer ; StackCount = 5
+		setptr Var5, Var1
+		pushtype TEXECWAIT ; StackCount = 6
+		assign Var6, ( Byte 1 )
+		pushtype LongInt ; StackCount = 7
+		assign Var7, ( LongInt 0 )
+		pushtype UnicodeString ; StackCount = 8
+		assign Var8, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, ( UnicodeString "/Q" )
+		pushtype UnicodeString ; StackCount = 10
+		assign Var10, Var2
+		pushvar Var4 ; StackCount = 11
+		call EXEC
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		compare Var3, Var4 == ( Byte 0 )
+		pop ; StackCount = 3
+		setflag not Var3
+		pop ; StackCount = 2
+		jumpflag loc_252
+		pushtype LongInt ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		assign Var4, ( LongInt 0 )
+		pushtype TMSGBOXTYPE ; StackCount = 5
+		assign Var5, ( Byte 2 )
+		pushtype UnicodeString ; StackCount = 6
+		pushtype UnicodeString ; StackCount = 7
+		assign Var7, ( UnicodeString "Installation of runtime libraries failed (" )
+		calculate Var7 + Var2
+		calculate Var7 + ( UnicodeString ").  Please make sure your operating system has current updates. " )
+		pushtype UnicodeString ; StackCount = 8
+		pushtype LongInt ; StackCount = 9
+		assign Var9, Var1
+		pushvar Var8 ; StackCount = 10
+		call SYSERRORMESSAGE
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		calculate Var7 + Var8
+		pop ; StackCount = 7
+		assign Var6, Var7
+		pop ; StackCount = 6
+		pushvar Var3 ; StackCount = 7
+		call MSGBOX
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+	loc_252:
+		ret
+
+Functions[44] = external returnsval SYSERRORMESSAGE(out Arg1)
+
+Functions[45] = exported BOOLEAN ISVCINSTALLED(in UnicodeString Arg1)
+		pushtype UnicodeString ; StackCount = 1
+		pushtype UnicodeString ; StackCount = 2
+		assign Var2, ( UnicodeString "Software\Microsoft\Windows\CurrentVersion\Uninstall\" )
+		calculate Var2 + Arg1
+		assign Var1, Var2
+		pop ; StackCount = 1
+		pushtype LongInt ; StackCount = 2
+		assign Var2, ( LongInt -2147483646 )
+		pushvar RetVal ; StackCount = 3
+		call REGKEYEXISTS
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+		pop ; StackCount = 0
+		ret
+
+Functions[46] = external returnsval REGKEYEXISTS(out Arg1)
+
+Functions[47] = exported LongInt GETIEXPLORERVERSION()
+		pushtype UnicodeString ; StackCount = 1
+		pushtype LongInt ; StackCount = 2
+		pushtype UnicodeString ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		pushtype Pointer ; StackCount = 5
+		setptr Var5, Var1
+		pushtype UnicodeString ; StackCount = 6
+		assign Var6, ( UnicodeString "svcUpdateVersion" )
+		pushtype UnicodeString ; StackCount = 7
+		assign Var7, ( UnicodeString "SOFTWARE\Microsoft\Internet Explorer" )
+		pushtype LongInt ; StackCount = 8
+		assign Var8, ( LongInt -2147483646 )
+		pushvar Var4 ; StackCount = 9
+		call REGQUERYSTRINGVALUE
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, Var1
+		pushtype WideChar ; StackCount = 5
+		assign Var5, ( WideChar '.' )
+		pushvar Var2 ; StackCount = 6
+		call POS
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		calculate Var2 - ( LongInt 1 )
+		pushtype LongInt ; StackCount = 4
+		assign Var4, Var2
+		pushtype LongInt ; StackCount = 5
+		assign Var5, ( LongInt 0 )
+		pushtype UnicodeString ; StackCount = 6
+		assign Var6, Var1
+		pushvar Var3 ; StackCount = 7
+		call COPY
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, Var3
+		pushvar RetVal ; StackCount = 5
+		call STRTOINT
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		ret
+
+Functions[48] = external returnsval COPY(out Arg1,out Arg2)
+
+Functions[49] = external returnsval STRTOINT(out Arg1)
+
+Functions[50] = exported void IEPAGE_ONACTIVATE(in TWIZARDPAGE Arg1)
+		pushtype BOOLEAN ; StackCount = 1
+		pushtype BOOLEAN ; StackCount = 2
+		pushtype TNEWCHECKBOX ; StackCount = 3
+		assign Var3, Global8
+		pushvar Var2 ; StackCount = 4
+		call TCHECKBOX->CHECKED
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		compare Var1, Var2 == ( Byte 1 )
+		pop ; StackCount = 1
+		setflag not Var1
+		pop ; StackCount = 0
+		jumpflag loc_86
+		pushtype BOOLEAN ; StackCount = 1
+		assign Var1, ( Byte 1 )
+		pushtype TNEWBUTTON ; StackCount = 2
+		pushtype TWIZARDFORM ; StackCount = 3
+		assign Var3, Global0
+		pushvar Var2 ; StackCount = 4
+		call TWIZARDFORM->NEXTBUTTON
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		call TCONTROL->ENABLED
+		pop ; StackCount = 1
+		pop ; StackCount = 0
+		jump loc_c0
+	loc_86:
+		pushtype BOOLEAN ; StackCount = 1
+		assign Var1, ( Byte 0 )
+		pushtype TNEWBUTTON ; StackCount = 2
+		pushtype TWIZARDFORM ; StackCount = 3
+		assign Var3, Global0
+		pushvar Var2 ; StackCount = 4
+		call TWIZARDFORM->NEXTBUTTON
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		call TCONTROL->ENABLED
+		pop ; StackCount = 1
+		pop ; StackCount = 0
+	loc_c0:
+		ret
+
+Functions[51] = external pascal void TCHECKBOX->CHECKED(out Arg1)
+
+Functions[52] = external pascal void TWIZARDFORM->NEXTBUTTON(out Arg1)
+
+Functions[53] = external pascal void TCONTROL->ENABLED(out Arg1)
+
+Functions[54] = exported BOOLEAN IEPAGE_ONNEXTBUTTONCLICK(in TWIZARDPAGE Arg1)
+		assign Global9, ( Byte 1 )
+		assign RetVal, ( Byte 1 )
+		ret
+
+Functions[55] = exported void ONWINDOWS7URLCLICK(in TOBJECT Arg1)
+		pushtype LongInt ; StackCount = 1
+		pushtype BOOLEAN ; StackCount = 2
+		pushtype Pointer ; StackCount = 3
+		setptr Var3, Var1
+		pushtype TEXECWAIT ; StackCount = 4
+		assign Var4, ( Byte 0 )
+		pushtype LongInt ; StackCount = 5
+		assign Var5, ( LongInt 1 )
+		pushtype UnicodeString ; StackCount = 6
+		assign Var6, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 7
+		assign Var7, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 8
+		assign Var8, ( UnicodeString "https://www.microsoft.com/en-us/download/Internet-Explorer-11-for-Windows-7-details.aspx" )
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, ( UnicodeString "open" )
+		pushvar Var2 ; StackCount = 10
+		call SHELLEXECASORIGINALUSER
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+		ret
+
+Functions[56] = external returnsval SHELLEXECASORIGINALUSER(out Arg1,out Arg2,out Arg3,in Arg4)
+
+Functions[57] = exported void ONWINDOWS8URLCLICK(in TOBJECT Arg1)
+		pushtype LongInt ; StackCount = 1
+		pushtype BOOLEAN ; StackCount = 2
+		pushtype Pointer ; StackCount = 3
+		setptr Var3, Var1
+		pushtype TEXECWAIT ; StackCount = 4
+		assign Var4, ( Byte 0 )
+		pushtype LongInt ; StackCount = 5
+		assign Var5, ( LongInt 1 )
+		pushtype UnicodeString ; StackCount = 6
+		assign Var6, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 7
+		assign Var7, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 8
+		assign Var8, ( UnicodeString "https://support.microsoft.com/en-us/help/15288/windows-8-update-to-windows-8-1" )
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, ( UnicodeString "open" )
+		pushvar Var2 ; StackCount = 10
+		call SHELLEXECASORIGINALUSER
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+		ret
+
+Functions[58] = exported void ONCHECKWARNINGBOXCLICK(in TOBJECT Arg1)
+		pushtype BOOLEAN ; StackCount = 1
+		pushtype BOOLEAN ; StackCount = 2
+		pushtype TNEWCHECKBOX ; StackCount = 3
+		assign Var3, Global8
+		pushvar Var2 ; StackCount = 4
+		call TCHECKBOX->CHECKED
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		compare Var1, Var2 == ( Byte 1 )
+		pop ; StackCount = 1
+		setflag not Var1
+		pop ; StackCount = 0
+		jumpflag loc_86
+		pushtype BOOLEAN ; StackCount = 1
+		assign Var1, ( Byte 1 )
+		pushtype TNEWBUTTON ; StackCount = 2
+		pushtype TWIZARDFORM ; StackCount = 3
+		assign Var3, Global0
+		pushvar Var2 ; StackCount = 4
+		call TWIZARDFORM->NEXTBUTTON
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		call TCONTROL->ENABLED
+		pop ; StackCount = 1
+		pop ; StackCount = 0
+		jump loc_c0
+	loc_86:
+		pushtype BOOLEAN ; StackCount = 1
+		assign Var1, ( Byte 0 )
+		pushtype TNEWBUTTON ; StackCount = 2
+		pushtype TWIZARDFORM ; StackCount = 3
+		assign Var3, Global0
+		pushvar Var2 ; StackCount = 4
+		call TWIZARDFORM->NEXTBUTTON
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		call TCONTROL->ENABLED
+		pop ; StackCount = 1
+		pop ; StackCount = 0
+	loc_c0:
+		ret
+
+Functions[59] = exported void CREATEWINDOWS8PAGE()
+		pushtype TNEWSTATICTEXT ; StackCount = 1
+		pushtype TNEWSTATICTEXT ; StackCount = 2
+		pushtype TNEWSTATICTEXT ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 5
+		assign Var5, ( UnicodeString "Windows Component Warning" )
+		pushtype LongInt ; StackCount = 6
+		assign Var6, ( LongInt 9 )
+		pushvar Global7 ; StackCount = 7
+		call CREATECUSTOMPAGE
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TWIZARDPAGENOTIFYEVENT ; StackCount = 4
+		assign Var4, ( ProcPtr IEPAGE_ONACTIVATE )
+		pushtype TWIZARDPAGE ; StackCount = 5
+		assign Var5, Global7
+		call TWIZARDPAGE->ONACTIVATE
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TWIZARDPAGEBUTTONEVENT ; StackCount = 4
+		assign Var4, ( ProcPtr IEPAGE_ONNEXTBUTTONCLICK )
+		pushtype TWIZARDPAGE ; StackCount = 5
+		assign Var5, Global7
+		call TWIZARDPAGE->ONNEXTBUTTONCLICK
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TCOMPONENT ; StackCount = 4
+		assign Var4, Global7
+		pushtype LongWord ; StackCount = 5
+		assign Var5, ( LongWord 46 )
+		pushvar Var1 ; StackCount = 6
+		call TCONTROL->CREATE
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TWINCONTROL ; StackCount = 4
+		pushtype TNEWNOTEBOOKPAGE ; StackCount = 5
+		pushtype TWIZARDPAGE ; StackCount = 6
+		assign Var6, Global7
+		pushvar Var5 ; StackCount = 7
+		call TWIZARDPAGE->SURFACE
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		assign Var4, Var5
+		pop ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var1
+		call TCONTROL->PARENT
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "Lighthouse Studio depends on the Windows component Internet Explorer in order for certain features to work correctly.  Windows 8 cannot install the latest version of Internet Explorer, but you can update Windows 8 to Windows 8.1 for free in order to update Internet Explorer to the latest version.  Click on the link below for more information about updating." )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var1
+		call TNEWSTATICTEXT->CAPTION
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		pushtype TWIZARDPAGE ; StackCount = 5
+		assign Var5, Global7
+		pushvar Var4 ; StackCount = 6
+		call TWIZARDPAGE->SURFACEWIDTH
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var1
+		call TCONTROL->WIDTH
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		assign Var4, ( Byte 1 )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var1
+		call TNEWSTATICTEXT->AUTOSIZE
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		assign Var4, ( Byte 1 )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var1
+		call TNEWSTATICTEXT->WORDWRAP
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TCOMPONENT ; StackCount = 4
+		assign Var4, Global7
+		pushtype LongWord ; StackCount = 5
+		assign Var5, ( LongWord 46 )
+		pushvar Var3 ; StackCount = 6
+		call TCONTROL->CREATE
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TWINCONTROL ; StackCount = 4
+		pushtype TNEWNOTEBOOKPAGE ; StackCount = 5
+		pushtype TWIZARDPAGE ; StackCount = 6
+		assign Var6, Global7
+		pushvar Var5 ; StackCount = 7
+		call TWIZARDPAGE->SURFACE
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		assign Var4, Var5
+		pop ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var3
+		call TCONTROL->PARENT
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var1
+		pushvar Var4 ; StackCount = 6
+		call TCONTROL->TOP
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pushtype LongInt ; StackCount = 5
+		pushtype TNEWSTATICTEXT ; StackCount = 6
+		assign Var6, Var1
+		pushvar Var5 ; StackCount = 7
+		call TCONTROL->HEIGHT
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		calculate Var4 + Var5
+		pop ; StackCount = 4
+		pushtype LongInt ; StackCount = 5
+		pushtype LongInt ; StackCount = 6
+		assign Var6, ( LongInt 12 )
+		pushvar Var5 ; StackCount = 7
+		call SCALEY
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		calculate Var4 + Var5
+		pop ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var3
+		call TCONTROL->TOP
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "How to Update to Windows 8.1 from Windows 8" )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var3
+		call TNEWSTATICTEXT->CAPTION
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		assign Var4, ( Byte 1 )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var3
+		call TNEWSTATICTEXT->AUTOSIZE
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		assign Var4, ( Byte 1 )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var3
+		call TNEWSTATICTEXT->WORDWRAP
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TFONTSTYLES ; StackCount = 4
+		assign Var4, ( Set  )
+		pushtype TFONT ; StackCount = 5
+		pushtype TNEWSTATICTEXT ; StackCount = 6
+		assign Var6, Var3
+		pushvar Var5 ; StackCount = 7
+		call TNEWSTATICTEXT->FONT
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		call TFONT->STYLE
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		assign Var4, ( LongInt 16711680 )
+		pushtype TFONT ; StackCount = 5
+		pushtype TNEWSTATICTEXT ; StackCount = 6
+		assign Var6, Var3
+		pushvar Var5 ; StackCount = 7
+		call TNEWSTATICTEXT->FONT
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		call TFONT->COLOR
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TNOTIFYEVENT ; StackCount = 4
+		assign Var4, ( ProcPtr ONWINDOWS8URLCLICK )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var3
+		call TNEWSTATICTEXT->ONCLICK
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		assign Var4, ( LongInt 1 )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var3
+		call TCONTROL->CURSOR
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TCOMPONENT ; StackCount = 4
+		assign Var4, Global7
+		pushtype LongWord ; StackCount = 5
+		assign Var5, ( LongWord 46 )
+		pushvar Var2 ; StackCount = 6
+		call TCONTROL->CREATE
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TWINCONTROL ; StackCount = 4
+		pushtype TNEWNOTEBOOKPAGE ; StackCount = 5
+		pushtype TWIZARDPAGE ; StackCount = 6
+		assign Var6, Global7
+		pushvar Var5 ; StackCount = 7
+		call TWIZARDPAGE->SURFACE
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		assign Var4, Var5
+		pop ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var2
+		call TCONTROL->PARENT
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var3
+		pushvar Var4 ; StackCount = 6
+		call TCONTROL->TOP
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pushtype LongInt ; StackCount = 5
+		pushtype TNEWSTATICTEXT ; StackCount = 6
+		assign Var6, Var3
+		pushvar Var5 ; StackCount = 7
+		call TCONTROL->HEIGHT
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		calculate Var4 + Var5
+		pop ; StackCount = 4
+		pushtype LongInt ; StackCount = 5
+		pushtype LongInt ; StackCount = 6
+		assign Var6, ( LongInt 12 )
+		pushvar Var5 ; StackCount = 7
+		call SCALEY
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		calculate Var4 + Var5
+		pop ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var2
+		call TCONTROL->TOP
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "You may choose to continue without updating Internet Explorer, but certain features may not work correctly." )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var2
+		call TNEWSTATICTEXT->CAPTION
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		pushtype TWIZARDPAGE ; StackCount = 5
+		assign Var5, Global7
+		pushvar Var4 ; StackCount = 6
+		call TWIZARDPAGE->SURFACEWIDTH
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var2
+		call TCONTROL->WIDTH
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		assign Var4, ( Byte 1 )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var2
+		call TNEWSTATICTEXT->AUTOSIZE
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		assign Var4, ( Byte 1 )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var2
+		call TNEWSTATICTEXT->WORDWRAP
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TCOMPONENT ; StackCount = 4
+		assign Var4, Global7
+		pushtype LongWord ; StackCount = 5
+		assign Var5, ( LongWord 43 )
+		pushvar Global8 ; StackCount = 6
+		call TCONTROL->CREATE
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TWINCONTROL ; StackCount = 4
+		pushtype TNEWNOTEBOOKPAGE ; StackCount = 5
+		pushtype TWIZARDPAGE ; StackCount = 6
+		assign Var6, Global7
+		pushvar Var5 ; StackCount = 7
+		call TWIZARDPAGE->SURFACE
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		assign Var4, Var5
+		pop ; StackCount = 4
+		pushtype TNEWCHECKBOX ; StackCount = 5
+		assign Var5, Global8
+		call TCONTROL->PARENT
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var2
+		pushvar Var4 ; StackCount = 6
+		call TCONTROL->TOP
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pushtype LongInt ; StackCount = 5
+		pushtype TNEWSTATICTEXT ; StackCount = 6
+		assign Var6, Var2
+		pushvar Var5 ; StackCount = 7
+		call TCONTROL->HEIGHT
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		calculate Var4 + Var5
+		pop ; StackCount = 4
+		pushtype LongInt ; StackCount = 5
+		pushtype LongInt ; StackCount = 6
+		assign Var6, ( LongInt 12 )
+		pushvar Var5 ; StackCount = 7
+		call SCALEY
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		calculate Var4 + Var5
+		pop ; StackCount = 4
+		pushtype TNEWCHECKBOX ; StackCount = 5
+		assign Var5, Global8
+		call TCONTROL->TOP
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		pushtype LongInt ; StackCount = 5
+		assign Var5, ( LongInt 310 )
+		pushvar Var4 ; StackCount = 6
+		call SCALEX
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pushtype TNEWCHECKBOX ; StackCount = 5
+		assign Var5, Global8
+		call TCONTROL->WIDTH
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		assign Var4, ( Byte 0 )
+		pushtype TNEWCHECKBOX ; StackCount = 5
+		assign Var5, Global8
+		call TCHECKBOX->CHECKED
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "  I understand this warning, install Lighthouse Studio anyway" )
+		pushtype TNEWCHECKBOX ; StackCount = 5
+		assign Var5, Global8
+		call TCHECKBOX->CAPTION
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TNOTIFYEVENT ; StackCount = 4
+		assign Var4, ( ProcPtr ONCHECKWARNINGBOXCLICK )
+		pushtype TNEWCHECKBOX ; StackCount = 5
+		assign Var5, Global8
+		call TCHECKBOX->ONCLICK
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		ret
+
+Functions[60] = external returnsval CREATECUSTOMPAGE(out Arg1,out Arg2)
+
+Functions[61] = external pascal void TWIZARDPAGE->ONACTIVATE(out Arg1)
+
+Functions[62] = external pascal void TWIZARDPAGE->ONNEXTBUTTONCLICK(out Arg1)
+
+Functions[63] = external register returnsval TCONTROL->CREATE(out Arg1)
+
+Functions[64] = external pascal void TWIZARDPAGE->SURFACE(out Arg1)
+
+Functions[65] = external pascal void TCONTROL->PARENT(out Arg1)
+
+Functions[66] = external pascal void TNEWSTATICTEXT->CAPTION(out Arg1)
+
+Functions[67] = external pascal void TWIZARDPAGE->SURFACEWIDTH(out Arg1)
+
+Functions[68] = external pascal void TCONTROL->WIDTH(out Arg1)
+
+Functions[69] = external pascal void TNEWSTATICTEXT->AUTOSIZE(out Arg1)
+
+Functions[70] = external pascal void TNEWSTATICTEXT->WORDWRAP(out Arg1)
+
+Functions[71] = external pascal void TCONTROL->TOP(out Arg1)
+
+Functions[72] = external pascal void TCONTROL->HEIGHT(out Arg1)
+
+Functions[73] = external returnsval SCALEY(out Arg1)
+
+Functions[74] = external pascal void TCONTROL->TOP(out Arg1)
+
+Functions[75] = external pascal void TNEWSTATICTEXT->FONT(out Arg1)
+
+Functions[76] = external pascal void TFONT->STYLE(out Arg1)
+
+Functions[77] = external pascal void TFONT->COLOR(out Arg1)
+
+Functions[78] = external pascal void TNEWSTATICTEXT->ONCLICK(out Arg1)
+
+Functions[79] = external pascal void TCONTROL->CURSOR(out Arg1)
+
+Functions[80] = external returnsval SCALEX(out Arg1)
+
+Functions[81] = external pascal void TCHECKBOX->CHECKED(out Arg1)
+
+Functions[82] = external pascal void TCHECKBOX->CAPTION(out Arg1)
+
+Functions[83] = external pascal void TCHECKBOX->ONCLICK(out Arg1)
+
+Functions[84] = exported void CREATEWINDOWS7PAGE()
+		pushtype TNEWSTATICTEXT ; StackCount = 1
+		pushtype TNEWSTATICTEXT ; StackCount = 2
+		pushtype TNEWSTATICTEXT ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 5
+		assign Var5, ( UnicodeString "Windows Component Warning" )
+		pushtype LongInt ; StackCount = 6
+		assign Var6, ( LongInt 9 )
+		pushvar Global7 ; StackCount = 7
+		call CREATECUSTOMPAGE
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TWIZARDPAGENOTIFYEVENT ; StackCount = 4
+		assign Var4, ( ProcPtr IEPAGE_ONACTIVATE )
+		pushtype TWIZARDPAGE ; StackCount = 5
+		assign Var5, Global7
+		call TWIZARDPAGE->ONACTIVATE
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TWIZARDPAGEBUTTONEVENT ; StackCount = 4
+		assign Var4, ( ProcPtr IEPAGE_ONNEXTBUTTONCLICK )
+		pushtype TWIZARDPAGE ; StackCount = 5
+		assign Var5, Global7
+		call TWIZARDPAGE->ONNEXTBUTTONCLICK
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TCOMPONENT ; StackCount = 4
+		assign Var4, Global7
+		pushtype LongWord ; StackCount = 5
+		assign Var5, ( LongWord 46 )
+		pushvar Var1 ; StackCount = 6
+		call TCONTROL->CREATE
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TWINCONTROL ; StackCount = 4
+		pushtype TNEWNOTEBOOKPAGE ; StackCount = 5
+		pushtype TWIZARDPAGE ; StackCount = 6
+		assign Var6, Global7
+		pushvar Var5 ; StackCount = 7
+		call TWIZARDPAGE->SURFACE
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		assign Var4, Var5
+		pop ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var1
+		call TCONTROL->PARENT
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "Lighthouse Studio depends on the Windows component Internet Explorer in order for certain features to work correctly.  We have detected that Internet Explorer is out of date on your machine. Click on the link below to install the latest version of Internet Explorer and then restart this installer." )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var1
+		call TNEWSTATICTEXT->CAPTION
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		pushtype TWIZARDPAGE ; StackCount = 5
+		assign Var5, Global7
+		pushvar Var4 ; StackCount = 6
+		call TWIZARDPAGE->SURFACEWIDTH
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var1
+		call TCONTROL->WIDTH
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		assign Var4, ( Byte 1 )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var1
+		call TNEWSTATICTEXT->AUTOSIZE
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		assign Var4, ( Byte 1 )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var1
+		call TNEWSTATICTEXT->WORDWRAP
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TCOMPONENT ; StackCount = 4
+		assign Var4, Global7
+		pushtype LongWord ; StackCount = 5
+		assign Var5, ( LongWord 46 )
+		pushvar Var2 ; StackCount = 6
+		call TCONTROL->CREATE
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TWINCONTROL ; StackCount = 4
+		pushtype TNEWNOTEBOOKPAGE ; StackCount = 5
+		pushtype TWIZARDPAGE ; StackCount = 6
+		assign Var6, Global7
+		pushvar Var5 ; StackCount = 7
+		call TWIZARDPAGE->SURFACE
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		assign Var4, Var5
+		pop ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var2
+		call TCONTROL->PARENT
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var1
+		pushvar Var4 ; StackCount = 6
+		call TCONTROL->TOP
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pushtype LongInt ; StackCount = 5
+		pushtype TNEWSTATICTEXT ; StackCount = 6
+		assign Var6, Var1
+		pushvar Var5 ; StackCount = 7
+		call TCONTROL->HEIGHT
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		calculate Var4 + Var5
+		pop ; StackCount = 4
+		pushtype LongInt ; StackCount = 5
+		pushtype LongInt ; StackCount = 6
+		assign Var6, ( LongInt 12 )
+		pushvar Var5 ; StackCount = 7
+		call SCALEY
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		calculate Var4 + Var5
+		pop ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var2
+		call TCONTROL->TOP
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "Download Internet Explorer 11" )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var2
+		call TNEWSTATICTEXT->CAPTION
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		assign Var4, ( Byte 1 )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var2
+		call TNEWSTATICTEXT->AUTOSIZE
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		assign Var4, ( Byte 1 )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var2
+		call TNEWSTATICTEXT->WORDWRAP
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TFONTSTYLES ; StackCount = 4
+		assign Var4, ( Set  )
+		pushtype TFONT ; StackCount = 5
+		pushtype TNEWSTATICTEXT ; StackCount = 6
+		assign Var6, Var2
+		pushvar Var5 ; StackCount = 7
+		call TNEWSTATICTEXT->FONT
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		call TFONT->STYLE
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		assign Var4, ( LongInt 16711680 )
+		pushtype TFONT ; StackCount = 5
+		pushtype TNEWSTATICTEXT ; StackCount = 6
+		assign Var6, Var2
+		pushvar Var5 ; StackCount = 7
+		call TNEWSTATICTEXT->FONT
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		call TFONT->COLOR
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TNOTIFYEVENT ; StackCount = 4
+		assign Var4, ( ProcPtr ONWINDOWS7URLCLICK )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var2
+		call TNEWSTATICTEXT->ONCLICK
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		assign Var4, ( LongInt 1 )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var2
+		call TCONTROL->CURSOR
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TCOMPONENT ; StackCount = 4
+		assign Var4, Global7
+		pushtype LongWord ; StackCount = 5
+		assign Var5, ( LongWord 46 )
+		pushvar Var3 ; StackCount = 6
+		call TCONTROL->CREATE
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TWINCONTROL ; StackCount = 4
+		pushtype TNEWNOTEBOOKPAGE ; StackCount = 5
+		pushtype TWIZARDPAGE ; StackCount = 6
+		assign Var6, Global7
+		pushvar Var5 ; StackCount = 7
+		call TWIZARDPAGE->SURFACE
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		assign Var4, Var5
+		pop ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var3
+		call TCONTROL->PARENT
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var2
+		pushvar Var4 ; StackCount = 6
+		call TCONTROL->TOP
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pushtype LongInt ; StackCount = 5
+		pushtype TNEWSTATICTEXT ; StackCount = 6
+		assign Var6, Var2
+		pushvar Var5 ; StackCount = 7
+		call TCONTROL->HEIGHT
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		calculate Var4 + Var5
+		pop ; StackCount = 4
+		pushtype LongInt ; StackCount = 5
+		pushtype LongInt ; StackCount = 6
+		assign Var6, ( LongInt 12 )
+		pushvar Var5 ; StackCount = 7
+		call SCALEY
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		calculate Var4 + Var5
+		pop ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var3
+		call TCONTROL->TOP
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "You may choose to continue without updating Internet Explorer, but certain features may not work correctly." )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var3
+		call TNEWSTATICTEXT->CAPTION
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		pushtype TWIZARDPAGE ; StackCount = 5
+		assign Var5, Global7
+		pushvar Var4 ; StackCount = 6
+		call TWIZARDPAGE->SURFACEWIDTH
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var3
+		call TCONTROL->WIDTH
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		assign Var4, ( Byte 1 )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var3
+		call TNEWSTATICTEXT->AUTOSIZE
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		assign Var4, ( Byte 1 )
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var3
+		call TNEWSTATICTEXT->WORDWRAP
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TCOMPONENT ; StackCount = 4
+		assign Var4, Global7
+		pushtype LongWord ; StackCount = 5
+		assign Var5, ( LongWord 43 )
+		pushvar Global8 ; StackCount = 6
+		call TCONTROL->CREATE
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TWINCONTROL ; StackCount = 4
+		pushtype TNEWNOTEBOOKPAGE ; StackCount = 5
+		pushtype TWIZARDPAGE ; StackCount = 6
+		assign Var6, Global7
+		pushvar Var5 ; StackCount = 7
+		call TWIZARDPAGE->SURFACE
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		assign Var4, Var5
+		pop ; StackCount = 4
+		pushtype TNEWCHECKBOX ; StackCount = 5
+		assign Var5, Global8
+		call TCONTROL->PARENT
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		pushtype TNEWSTATICTEXT ; StackCount = 5
+		assign Var5, Var3
+		pushvar Var4 ; StackCount = 6
+		call TCONTROL->TOP
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pushtype LongInt ; StackCount = 5
+		pushtype TNEWSTATICTEXT ; StackCount = 6
+		assign Var6, Var3
+		pushvar Var5 ; StackCount = 7
+		call TCONTROL->HEIGHT
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		calculate Var4 + Var5
+		pop ; StackCount = 4
+		pushtype LongInt ; StackCount = 5
+		pushtype LongInt ; StackCount = 6
+		assign Var6, ( LongInt 12 )
+		pushvar Var5 ; StackCount = 7
+		call SCALEY
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		calculate Var4 + Var5
+		pop ; StackCount = 4
+		pushtype TNEWCHECKBOX ; StackCount = 5
+		assign Var5, Global8
+		call TCONTROL->TOP
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype LongInt ; StackCount = 4
+		pushtype LongInt ; StackCount = 5
+		assign Var5, ( LongInt 310 )
+		pushvar Var4 ; StackCount = 6
+		call SCALEX
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pushtype TNEWCHECKBOX ; StackCount = 5
+		assign Var5, Global8
+		call TCONTROL->WIDTH
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		assign Var4, ( Byte 0 )
+		pushtype TNEWCHECKBOX ; StackCount = 5
+		assign Var5, Global8
+		call TCHECKBOX->CHECKED
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "  I understand this warning, install Lighthouse Studio anyway" )
+		pushtype TNEWCHECKBOX ; StackCount = 5
+		assign Var5, Global8
+		call TCHECKBOX->CAPTION
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype TNOTIFYEVENT ; StackCount = 4
+		assign Var4, ( ProcPtr ONCHECKWARNINGBOXCLICK )
+		pushtype TNEWCHECKBOX ; StackCount = 5
+		assign Var5, Global8
+		call TCHECKBOX->ONCLICK
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		ret
+
+Functions[85] = exported BOOLEAN ISWINDOWSSEVEN()
+		assign RetVal, Global10
+		ret
+
+Functions[86] = exported BOOLEAN ISRUNNINGSILENT()
+		pushtype BOOLEAN ; StackCount = 1
+		pushvar Var1 ; StackCount = 2
+		call ISUNINSTALLER
+		pop ; StackCount = 1
+		setflag not Var1
+		pop ; StackCount = 0
+		jumpflag loc_50
+		pusheh 0xffffffff, 0xe, 0xffffffff, 0x1c
+		pushvar RetVal ; StackCount = 1
+		call UNINSTALLSILENT
+		pop ; StackCount = 0
+		popeh 0x0
+		assign RetVal, ( Byte 0 )
+		popeh 0x2
+		jump loc_7d
+	loc_50:
+		pusheh 0xffffffff, 0xe, 0xffffffff, 0x1c
+		pushvar RetVal ; StackCount = 1
+		call WIZARDSILENT
+		pop ; StackCount = 0
+		popeh 0x0
+		assign RetVal, ( Byte 0 )
+		popeh 0x2
+	loc_7d:
+		ret
+
+Functions[87] = external returnsval ISUNINSTALLER()
+
+Functions[88] = external returnsval UNINSTALLSILENT()
+
+Functions[89] = external returnsval WIZARDSILENT()
+
+Functions[90] = exported LongInt SHOWUNINSTALLPROMPT(in UnicodeString Arg1,in UnicodeString Arg2)
+		pushtype LongInt ; StackCount = 1
+		assign Var1, ( LongInt 4 )
+		pushtype TMSGBOXTYPE ; StackCount = 2
+		assign Var2, ( Byte 1 )
+		pushtype UnicodeString ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "Sawtooth Software " )
+		calculate Var4 + Arg1
+		calculate Var4 + ( WideChar ' ' )
+		calculate Var4 + Arg2
+		calculate Var4 + ( UnicodeString " is installed on your machine.  It is not required to uninstall this version.Both versions may be installed together.Would you like to uninstall this version of " )
+		calculate Var4 + Arg1
+		calculate Var4 + ( WideChar '?' )
+		assign Var3, Var4
+		pop ; StackCount = 3
+		pushvar RetVal ; StackCount = 4
+		call MSGBOX
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+		pop ; StackCount = 0
+		ret
+
+Functions[91] = exported BOOLEAN ISLIGHTHOUSESTUDIORUNNING(in TMSGBOXTYPE Arg1,in LongInt Arg2,in LongInt Arg3,out LongInt Arg4)
+		pushtype Variant ; StackCount = 1
+		pushtype Variant ; StackCount = 2
+		pushtype Variant ; StackCount = 3
+		assign RetVal, ( Byte 0 )
+		pusheh 0xffffffff, 0x5d4, 0xffffffff, 0x679
+		pushtype IDISPATCH ; StackCount = 4
+		pushtype UnicodeString ; StackCount = 5
+		assign Var5, ( UnicodeString "WBEMScripting.SWBEMLocator" )
+		pushvar Var4 ; StackCount = 6
+		call CREATEOLEOBJECT
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		assign Var1, Var4
+		pop ; StackCount = 3
+		pushtype !OPENARRAYOFVARIANT ; StackCount = 4
+		pushtype !OPENARRAYOFVARIANT ; StackCount = 5
+		pushtype LongInt ; StackCount = 6
+		assign Var6, ( LongInt 0 )
+		pushvar Var5 ; StackCount = 7
+		call SETARRAYLENGTH
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		assign Var4, Var5
+		pop ; StackCount = 4
+		pushtype String ; StackCount = 5
+		assign Var5, ( String "ConnectServer" )
+		pushtype BOOLEAN ; StackCount = 6
+		assign Var6, ( Byte 0 )
+		pushtype IDISPATCH ; StackCount = 7
+		assign Var7, Var1
+		pushvar Var2 ; StackCount = 8
+		call IDISPATCHINVOKE
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype Variant ; StackCount = 4
+		pushtype !OPENARRAYOFVARIANT ; StackCount = 5
+		pushtype !OPENARRAYOFVARIANT ; StackCount = 6
+		pushtype LongInt ; StackCount = 7
+		assign Var7, ( LongInt 1 )
+		pushvar Var6 ; StackCount = 8
+		call SETARRAYLENGTH
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		assign Var6[0], ( LongInt 3 )
+		assign Var5, Var6
+		pop ; StackCount = 5
+		pushtype String ; StackCount = 6
+		assign Var6, ( String "ImpersonationLevel" )
+		pushtype BOOLEAN ; StackCount = 7
+		assign Var7, ( Byte 1 )
+		pushtype IDISPATCH ; StackCount = 8
+		pushtype Variant ; StackCount = 9
+		pushtype !OPENARRAYOFVARIANT ; StackCount = 10
+		pushtype !OPENARRAYOFVARIANT ; StackCount = 11
+		pushtype LongInt ; StackCount = 12
+		assign Var12, ( LongInt 0 )
+		pushvar Var11 ; StackCount = 13
+		call SETARRAYLENGTH
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		assign Var10, Var11
+		pop ; StackCount = 10
+		pushtype String ; StackCount = 11
+		assign Var11, ( String "Security_" )
+		pushtype BOOLEAN ; StackCount = 12
+		assign Var12, ( Byte 0 )
+		pushtype IDISPATCH ; StackCount = 13
+		assign Var13, Var2
+		pushvar Var9 ; StackCount = 14
+		call IDISPATCHINVOKE
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pop ; StackCount = 9
+		assign Var8, Var9
+		pop ; StackCount = 8
+		pushvar Var4 ; StackCount = 9
+		call IDISPATCHINVOKE
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype !OPENARRAYOFVARIANT ; StackCount = 4
+		pushtype !OPENARRAYOFVARIANT ; StackCount = 5
+		pushtype LongInt ; StackCount = 6
+		assign Var6, ( LongInt 1 )
+		pushvar Var5 ; StackCount = 7
+		call SETARRAYLENGTH
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		assign Var5[0], ( UnicodeString "Select * from Win32_Process Where Name = 'LighthouseStudio.exe'" )
+		assign Var4, Var5
+		pop ; StackCount = 4
+		pushtype String ; StackCount = 5
+		assign Var5, ( String "ExecQuery" )
+		pushtype BOOLEAN ; StackCount = 6
+		assign Var6, ( Byte 0 )
+		pushtype IDISPATCH ; StackCount = 7
+		assign Var7, Var2
+		pushvar Var3 ; StackCount = 8
+		call IDISPATCHINVOKE
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pushtype BOOLEAN ; StackCount = 4
+		pushtype Variant ; StackCount = 5
+		pushtype !OPENARRAYOFVARIANT ; StackCount = 6
+		pushtype !OPENARRAYOFVARIANT ; StackCount = 7
+		pushtype LongInt ; StackCount = 8
+		assign Var8, ( LongInt 0 )
+		pushvar Var7 ; StackCount = 9
+		call SETARRAYLENGTH
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		assign Var6, Var7
+		pop ; StackCount = 6
+		pushtype String ; StackCount = 7
+		assign Var7, ( String "Count" )
+		pushtype BOOLEAN ; StackCount = 8
+		assign Var8, ( Byte 0 )
+		pushtype IDISPATCH ; StackCount = 9
+		assign Var9, Var3
+		pushvar Var5 ; StackCount = 10
+		call IDISPATCHINVOKE
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		compare Var4, Var5 > ( LongInt 0 )
+		pop ; StackCount = 4
+		setflag not Var4
+		pop ; StackCount = 3
+		jumpflag loc_5fe
+		assign RetVal, ( Byte 1 )
+		pushtype BOOLEAN ; StackCount = 4
+		pushvar Var4 ; StackCount = 5
+		call ISRUNNINGSILENT
+		pop ; StackCount = 4
+		setflag not Var4
+		pop ; StackCount = 3
+		jumpflag loc_501
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "Lighthouse Studio is running, cannot continue. Contact a System Administrator." )
+		call LOG
+		pop ; StackCount = 3
+		assign Arg4, Arg3
+		jump loc_5fe
+	loc_501:
+		pushtype LongInt ; StackCount = 4
+		assign Var4, Arg2
+		pushtype TMSGBOXTYPE ; StackCount = 5
+		assign Var5, Arg1
+		pushtype UnicodeString ; StackCount = 6
+		assign Var6, ( UnicodeString "Lighthouse Studio is running.
+
+Please close all instances of Lighthouse Studio to continue." )
+		pushvar Arg4 ; StackCount = 7
+		call MSGBOX
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+	loc_5fe:
+		popeh 0x0
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "Could not run WMI query to see if Lighthouse Studio is running." )
+		call LOG
+		pop ; StackCount = 3
+		assign Arg4, Arg3
+		popeh 0x2
+		pushvar Var3 ; StackCount = 4
+		call UNASSIGNED
+		pop ; StackCount = 3
+		pushvar Var2 ; StackCount = 4
+		call UNASSIGNED
+		pop ; StackCount = 3
+		pushvar Var1 ; StackCount = 4
+		call UNASSIGNED
+		pop ; StackCount = 3
+		ret
+
+Functions[92] = external returnsval CREATEOLEOBJECT(out Arg1)
+
+Functions[93] = external returnsval IDISPATCHINVOKE(out Arg1,out Arg2)
+
+Functions[94] = external returnsval UNASSIGNED()
+
+Functions[95] = exported void RUNEXCELRFCINSTALLER()
+		pushtype LongInt ; StackCount = 1
+		pushtype BOOLEAN ; StackCount = 2
+		pushtype Pointer ; StackCount = 3
+		setptr Var3, Var1
+		pushtype TEXECWAIT ; StackCount = 4
+		assign Var4, ( Byte 1 )
+		pushtype LongInt ; StackCount = 5
+		assign Var5, ( LongInt 1 )
+		pushtype UnicodeString ; StackCount = 6
+		assign Var6, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 7
+		assign Var7, ( UnicodeString "/verysilent" )
+		pushtype UnicodeString ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		assign Var9, ( UnicodeString "{tmp}\ExcelRFC.exe" )
+		pushvar Var8 ; StackCount = 10
+		call EXPANDCONSTANT
+		pop ; StackCount = 9
+		pop ; StackCount = 8
+		pushvar Var2 ; StackCount = 9
+		call EXEC
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		pop ; StackCount = 6
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		logicalnot Var2
+		setflag not Var2
+		pop ; StackCount = 1
+		jumpflag loc_1ba
+		pushtype LongInt ; StackCount = 2
+		pushtype LongInt ; StackCount = 3
+		assign Var3, ( LongInt 0 )
+		pushtype TMSGBOXTYPE ; StackCount = 4
+		assign Var4, ( Byte 2 )
+		pushtype UnicodeString ; StackCount = 5
+		pushtype UnicodeString ; StackCount = 6
+		assign Var6, ( UnicodeString "Other installer failed to run!
+" )
+		pushtype UnicodeString ; StackCount = 7
+		pushtype LongInt ; StackCount = 8
+		assign Var8, Var1
+		pushvar Var7 ; StackCount = 9
+		call SYSERRORMESSAGE
+		pop ; StackCount = 8
+		pop ; StackCount = 7
+		calculate Var6 + Var7
+		pop ; StackCount = 6
+		assign Var5, Var6
+		pop ; StackCount = 5
+		pushvar Var2 ; StackCount = 6
+		call MSGBOX
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		pop ; StackCount = 2
+		pop ; StackCount = 1
+	loc_1ba:
+		ret
+
+Functions[96] = exported BOOLEAN INITIALIZESETUP()
+		pushvar RetVal ; StackCount = 1
+		call CHECKFORDEPENDENCIES
+		pop ; StackCount = 0
+		ret
+
+Functions[97] = exported void INITIALIZEWIZARD()
+		pushtype TWINDOWSVERSION ; StackCount = 1
+		pushtype LongInt ; StackCount = 2
+		call ADDDEPENDENCIESTODOWNLOADPAGE
+		assign Global9, ( Byte 0 )
+		pushtype Pointer ; StackCount = 3
+		setptr Var3, Var1
+		call GETWINDOWSVERSIONEX
+		pop ; StackCount = 2
+		pushtype BOOLEAN ; StackCount = 3
+		compare Var3, Var1[2] == ( LongInt 9200 )
+		setflag not Var3
+		pop ; StackCount = 2
+		jumpflag loc_66
+		call CREATEWINDOWS8PAGE
+		jump loc_d5
+	loc_66:
+		pushtype BOOLEAN ; StackCount = 3
+		compare Var3, Var1[2] == ( LongInt 7601 )
+		setflag not Var3
+		pop ; StackCount = 2
+		jumpflag loc_d5
+		assign Global10, ( Byte 1 )
+		pushvar Var2 ; StackCount = 3
+		call GETIEXPLORERVERSION
+		pop ; StackCount = 2
+		pushtype BOOLEAN ; StackCount = 3
+		compare Var3, Var2 < ( LongInt 11 )
+		setflag not Var3
+		pop ; StackCount = 2
+		jumpflag loc_d5
+		call CREATEWINDOWS7PAGE
+	loc_d5:
+		ret
+
+Functions[98] = external void GETWINDOWSVERSIONEX(in Arg1)
+
+Functions[99] = exported UnicodeString UPDATEREADYMEMO(in UnicodeString Arg1,in UnicodeString Arg2,in UnicodeString Arg3,in UnicodeString Arg4,in UnicodeString Arg5,in UnicodeString Arg6,in UnicodeString Arg7,in UnicodeString Arg8)
+		pushtype UnicodeString ; StackCount = 1
+		pushtype LongInt ; StackCount = 2
+		pushvar Var1 ; StackCount = 3
+		call GETDEPENDENCYREADYTEXT
+		pop ; StackCount = 2
+		pushtype BOOLEAN ; StackCount = 3
+		compare Var3, Global9 == ( Byte 1 )
+		setflag not Var3
+		pop ; StackCount = 2
+		jumpflag loc_f8
+		pushtype UnicodeString ; StackCount = 3
+		assign Var3, Var1
+		calculate Var3 + ( UnicodeString "User selected to ignore Internet Explorer out of date warning" )
+		calculate Var3 + Arg2
+		calculate Var3 + Arg2
+		assign Var1, Var3
+		pop ; StackCount = 2
+	loc_f8:
+		pushtype BOOLEAN ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "uninstallpreviousversionsautomatically" )
+		pushvar Var3 ; StackCount = 5
+		call WIZARDISTASKSELECTED
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		setflag not Var3
+		pop ; StackCount = 2
+		jumpflag loc_221
+		pushtype UnicodeString ; StackCount = 3
+		assign Var3, Var1
+		calculate Var3 + ( UnicodeString "Previous versions will be uninstalled automatically" )
+		calculate Var3 + Arg2
+		calculate Var3 + Arg2
+		assign Var1, Var3
+		pop ; StackCount = 2
+	loc_221:
+		pushtype BOOLEAN ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		assign Var4, ( UnicodeString "excelplugin" )
+		pushvar Var3 ; StackCount = 5
+		call WIZARDISTASKSELECTED
+		pop ; StackCount = 4
+		pop ; StackCount = 3
+		setflag not Var3
+		pop ; StackCount = 2
+		jumpflag loc_36f
+		pushtype UnicodeString ; StackCount = 3
+		assign Var3, Var1
+		calculate Var3 + Arg8
+		calculate Var3 + Arg2
+		calculate Var3 + Arg2
+		assign Var1, Var3
+		pop ; StackCount = 2
+		pushtype UnicodeString ; StackCount = 3
+		assign Var3, Arg4
+		calculate Var3 + Arg2
+		calculate Var3 + ( UnicodeString "      " )
+		pushtype UnicodeString ; StackCount = 4
+		pushtype UnicodeString ; StackCount = 5
+		assign Var5, ( UnicodeString "{pf}" )
+		pushvar Var4 ; StackCount = 6
+		call EXPANDCONSTANT
+		pop ; StackCount = 5
+		pop ; StackCount = 4
+		calculate Var3 + Var4
+		pop ; StackCount = 3
+		calculate Var3 + ( UnicodeString "\Sawtooth Software\ExcelRFC" )
+		assign Arg4, Var3
+		pop ; StackCount = 2
+	loc_36f:
+		pushtype UnicodeString ; StackCount = 3
+		assign Var3, Var1
+		calculate Var3 + Arg4
+		assign Var1, Var3
+		pop ; StackCount = 2
+		assign RetVal, Var1
+		ret
+
+Functions[100] = external returnsval WIZARDISTASKSELECTED(out Arg1)
+
+Functions[101] = exported BOOLEAN NEXTBUTTONCLICK(in LongInt Arg1)
+		pushtype LongInt ; StackCount = 1
+		pushtype LongInt ; StackCount = 2
+		pushtype UnicodeString ; StackCount = 3
+		pushtype UnicodeString ; StackCount = 4
+		pushtype TSTRINGLIST ; StackCount = 5
+		pushtype LongInt ; StackCount = 6
+		pushtype BOOLEAN ; StackCount = 7
+		pushtype LongInt ; StackCount = 8
+		pushtype UnicodeString ; StackCount = 9
+		pushtype LongInt ; StackCount = 10
+		assign RetVal, ( Byte 1 )
+		pushtype BOOLEAN ; StackCount = 11
+		compare Var11, Arg1 == ( LongInt 10 )
+		setflag not Var11
+		pop ; StackCount = 10
+		jumpflag loc_2a94
+		pushtype BOOLEAN ; StackCount = 11
+	loc_6a:
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var6
+		pushtype LongInt ; StackCount = 13
+		assign Var13, ( LongInt 2 )
+		pushtype LongInt ; StackCount = 14
+		assign Var14, ( LongInt 5 )
+		pushtype TMSGBOXTYPE ; StackCount = 15
+		assign Var15, ( Byte 0 )
+		pushvar Var11 ; StackCount = 16
+		call ISLIGHTHOUSESTUDIORUNNING
+		pop ; StackCount = 15
+		pop ; StackCount = 14
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		jumpfalse Var11, loc_106
+		pushtype BOOLEAN ; StackCount = 12
+		compare Var12, Var6 == ( LongInt 2 )
+		setflag not Var12
+		pop ; StackCount = 11
+		jumpflag loc_101
+		assign RetVal, ( Byte 0 )
+		ret
+	loc_101:
+		jump loc_6a
+	loc_106:
+		pop ; StackCount = 10
+		pushtype BOOLEAN ; StackCount = 11
+		pushvar Var11 ; StackCount = 12
+		call SHOWDEPENDENCYDOWNLOADPAGEANDINSTALL
+		pop ; StackCount = 11
+		logicalnot Var11
+		setflag not Var11
+		pop ; StackCount = 10
+		jumpflag loc_138
+		assign RetVal, ( Byte 0 )
+		ret
+	loc_138:
+		pushtype BOOLEAN ; StackCount = 11
+		compare Var11, RetVal == ( Byte 1 )
+		setflag not Var11
+		pop ; StackCount = 10
+		jumpflag loc_2a94
+		pushtype LongWord ; StackCount = 11
+		assign Var11, ( LongWord 34 )
+		pushvar Var5 ; StackCount = 12
+		call TSTRINGLIST->CREATE
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{28EF040A-04FC-458D-B5AF-FA041A8CC627}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{9002A7C9-B224-4BCE-874D-8B4C79E21361}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{7061F448-0FA5-42B9-BC22-BE27AB92EF0A}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{5B4A43C0-8EBF-454A-89EA-76D407DA1F89}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{F146CC31-454E-402E-9722-081578ABAFEC}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{9C215107-980F-4B45-BC4D-5468E420410B}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{8F58BD86-748E-4A0C-9C06-CD7E574E2DEC}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{7E34EBFA-7A9F-4EC9-95CC-3D0FC30639BE}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{76F95D72-B21E-4C7F-A32C-969D5C1F7DCB}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{6C741A78-AC6D-4F89-AABF-F06365883E75}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{CDEF9940-42B0-41EF-A212-94D757C0C506}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{586800EE-740B-4419-9AF3-1EF57E0B235F}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{586800EE-740B-4419-9AF3-1EF57E0B235F}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{E3B23678-D06B-4372-90F5-E1E311BCD3BA}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{B2BB0000-4428-4D5D-922B-1CB9839EA362}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{DA73C91E-D5A0-4A4E-A952-7C0F972504B1}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{5CA48D93-3E92-4753-AD55-06ADB2E62010}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{8D9C3B54-60E7-44D5-87D5-F24CDAD14047}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{01705CA7-EE00-4405-9D6C-F3A54D5CFE65}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "{E424F2B8-ABAF-4408-88E7-909E29E3BB2C}" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 7.9.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 7.9.1_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 7.9.2_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 7.9.3_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 7.9.4_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 7.9.5_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.0.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.0.2_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.1.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.1.2_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.1.4_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.2.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.2.2_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.2.4_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.3.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.3.2_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.3.4_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.3.6_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.3.7_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.3.8_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.3.10_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.4.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.4.2_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.4.4_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.4.6_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "SSIWEB 8.4.8_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.0.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.0.1_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.1.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.2.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.3.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.3.1_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.4.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.5.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.5.1_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.5.2_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.5.3_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.6.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.6.1_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.7.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.7.1_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.7.2_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.8.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.8.1_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.9.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.9.1_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.9.2_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.10.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.10.1_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.11.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.12.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.12.1_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.13.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.13.1_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.13.2_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.14.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.14.1_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.14.2_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.14.9_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, ( UnicodeString "LIGHTHOUSE 9.15.0_is1" )
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var11 ; StackCount = 14
+		call TSTRINGS->ADD
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype UnicodeString ; StackCount = 11
+		assign Var11, ( UnicodeString "uninstallpreviousversionsautomatically" )
+		pushvar Var7 ; StackCount = 12
+		call WIZARDISTASKSELECTED
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		assign Var10, ( LongInt -2130706430 )
+		assign Var9, ( UnicodeString "SSI Web" )
+		assign Var2, ( LongInt 0 )
+		pushtype BOOLEAN ; StackCount = 11
+	loc_2292:
+		pushtype LongInt ; StackCount = 12
+		pushtype TSTRINGLIST ; StackCount = 13
+		assign Var13, Var5
+		pushvar Var12 ; StackCount = 14
+		call TSTRINGS->COUNT
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		calculate Var12 - ( LongInt 1 )
+		compare Var11, Var2 <= Var12
+		pop ; StackCount = 11
+		jumpfalse Var11, loc_28b6
+		pushtype BOOLEAN ; StackCount = 12
+		compare Var12, Var2 >= ( LongInt 47 )
+		setflag not Var12
+		pop ; StackCount = 11
+		jumpflag loc_2338
+		assign Var9, ( UnicodeString "Lighthouse Studio" )
+	loc_2338:
+		pushtype BOOLEAN ; StackCount = 12
+		compare Var12, Var2 >= ( LongInt 50 )
+		setflag not Var12
+		pop ; StackCount = 11
+		jumpflag loc_236e
+		assign Var10, ( LongInt -2147483646 )
+	loc_236e:
+		pushtype BOOLEAN ; StackCount = 12
+		pushtype Pointer ; StackCount = 13
+		setptr Var13, Var3
+		pushtype UnicodeString ; StackCount = 14
+		assign Var14, ( UnicodeString "UninstallString" )
+		pushtype UnicodeString ; StackCount = 15
+		pushtype UnicodeString ; StackCount = 16
+		assign Var16, ( UnicodeString "Software\Microsoft\Windows\CurrentVersion\Uninstall\" )
+		pushtype UnicodeString ; StackCount = 17
+		pushtype LongInt ; StackCount = 18
+		assign Var18, Var2
+		pushtype TSTRINGLIST ; StackCount = 19
+		assign Var19, Var5
+		pushvar Var17 ; StackCount = 20
+		call TSTRINGS->STRINGS
+		pop ; StackCount = 19
+		pop ; StackCount = 18
+		pop ; StackCount = 17
+		calculate Var16 + Var17
+		pop ; StackCount = 16
+		assign Var15, Var16
+		pop ; StackCount = 15
+		pushtype LongInt ; StackCount = 16
+		assign Var16, Var10
+		pushvar Var12 ; StackCount = 17
+		call REGQUERYSTRINGVALUE
+		pop ; StackCount = 16
+		pop ; StackCount = 15
+		pop ; StackCount = 14
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		setflag not Var12
+		pop ; StackCount = 11
+		jumpflag loc_28ab
+		pushtype BOOLEAN ; StackCount = 12
+		pushtype Pointer ; StackCount = 13
+		setptr Var13, Var4
+		pushtype UnicodeString ; StackCount = 14
+		assign Var14, ( UnicodeString "DisplayVersion" )
+		pushtype UnicodeString ; StackCount = 15
+		pushtype UnicodeString ; StackCount = 16
+		assign Var16, ( UnicodeString "Software\Microsoft\Windows\CurrentVersion\Uninstall\" )
+		pushtype UnicodeString ; StackCount = 17
+		pushtype LongInt ; StackCount = 18
+		assign Var18, Var2
+		pushtype TSTRINGLIST ; StackCount = 19
+		assign Var19, Var5
+		pushvar Var17 ; StackCount = 20
+		call TSTRINGS->STRINGS
+		pop ; StackCount = 19
+		pop ; StackCount = 18
+		pop ; StackCount = 17
+		calculate Var16 + Var17
+		pop ; StackCount = 16
+		assign Var15, Var16
+		pop ; StackCount = 15
+		pushtype LongInt ; StackCount = 16
+		assign Var16, Var10
+		pushvar Var12 ; StackCount = 17
+		call REGQUERYSTRINGVALUE
+		pop ; StackCount = 16
+		pop ; StackCount = 15
+		pop ; StackCount = 14
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		setflag not Var12
+		pop ; StackCount = 11
+		jumpflag loc_28ab
+		assign Var8, ( LongInt 7 )
+		pushtype BOOLEAN ; StackCount = 12
+		pushvar Var12 ; StackCount = 13
+		call WIZARDSILENT
+		pop ; StackCount = 12
+		logicalnot Var12
+		setflag not Var12
+		pop ; StackCount = 11
+		jumpflag loc_268b
+		pushtype BOOLEAN ; StackCount = 12
+		assign Var12, Var7
+		logicalnot Var12
+		setflag not Var12
+		pop ; StackCount = 11
+		jumpflag loc_2677
+		pushtype UnicodeString ; StackCount = 12
+		assign Var12, Var4
+		pushtype UnicodeString ; StackCount = 13
+		assign Var13, Var9
+		pushvar Var8 ; StackCount = 14
+		call SHOWUNINSTALLPROMPT
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		jump loc_2686
+	loc_2677:
+		assign Var8, ( LongInt 6 )
+	loc_2686:
+		jump loc_26b7
+	loc_268b:
+		pushtype BOOLEAN ; StackCount = 12
+		assign Var12, Var7
+		setflag not Var12
+		pop ; StackCount = 11
+		jumpflag loc_26b7
+		assign Var8, ( LongInt 6 )
+	loc_26b7:
+		pushtype BOOLEAN ; StackCount = 12
+		compare Var12, Var8 == ( LongInt 6 )
+		setflag not Var12
+		pop ; StackCount = 11
+		jumpflag loc_28ab
+		pushtype BOOLEAN ; StackCount = 12
+		compare Var12, Var2 >= ( LongInt 20 )
+		setflag not Var12
+		pop ; StackCount = 11
+		jumpflag loc_27af
+		pushtype BOOLEAN ; StackCount = 12
+		pushtype Pointer ; StackCount = 13
+		setptr Var13, Var1
+		pushtype TEXECWAIT ; StackCount = 14
+		assign Var14, ( Byte 1 )
+		pushtype LongInt ; StackCount = 15
+		assign Var15, ( LongInt 5 )
+		pushtype UnicodeString ; StackCount = 16
+		assign Var16, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 17
+		assign Var17, ( UnicodeString "/silent" )
+		pushtype UnicodeString ; StackCount = 18
+		pushtype UnicodeString ; StackCount = 19
+		assign Var19, Var3
+		pushvar Var18 ; StackCount = 20
+		call REMOVEQUOTES
+		pop ; StackCount = 19
+		pop ; StackCount = 18
+		pushvar Var12 ; StackCount = 19
+		call EXEC
+		pop ; StackCount = 18
+		pop ; StackCount = 17
+		pop ; StackCount = 16
+		pop ; StackCount = 15
+		pop ; StackCount = 14
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		jump loc_28ab
+	loc_27af:
+		pushtype BOOLEAN ; StackCount = 12
+		pushtype Pointer ; StackCount = 13
+		setptr Var13, Var1
+		pushtype TEXECWAIT ; StackCount = 14
+		assign Var14, ( Byte 1 )
+		pushtype LongInt ; StackCount = 15
+		assign Var15, ( LongInt 5 )
+		pushtype UnicodeString ; StackCount = 16
+		assign Var16, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 17
+		pushtype UnicodeString ; StackCount = 18
+		assign Var18, ( UnicodeString "/qn /x" )
+		pushtype UnicodeString ; StackCount = 19
+		pushtype LongInt ; StackCount = 20
+		assign Var20, Var2
+		pushtype TSTRINGLIST ; StackCount = 21
+		assign Var21, Var5
+		pushvar Var19 ; StackCount = 22
+		call TSTRINGS->STRINGS
+		pop ; StackCount = 21
+		pop ; StackCount = 20
+		pop ; StackCount = 19
+		calculate Var18 + Var19
+		pop ; StackCount = 18
+		assign Var17, Var18
+		pop ; StackCount = 17
+		pushtype UnicodeString ; StackCount = 18
+		assign Var18, ( UnicodeString "MsiExec.exe" )
+		pushvar Var12 ; StackCount = 19
+		call EXEC
+		pop ; StackCount = 18
+		pop ; StackCount = 17
+		pop ; StackCount = 16
+		pop ; StackCount = 15
+		pop ; StackCount = 14
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+	loc_28ab:
+		inc Var2
+		jump loc_2292
+	loc_28b6:
+		pop ; StackCount = 10
+		pushtype BOOLEAN ; StackCount = 11
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var3
+		pushtype UnicodeString ; StackCount = 13
+		assign Var13, ( UnicodeString "UnInstallString" )
+		pushtype UnicodeString ; StackCount = 14
+		assign Var14, ( UnicodeString "Software\Microsoft\Windows\CurrentVersion\Uninstall\LIGHTHOUSE 9.15.0_is1" )
+		pushtype LongInt ; StackCount = 15
+		assign Var15, ( LongInt -2147483646 )
+		pushvar Var11 ; StackCount = 16
+		call REGQUERYSTRINGVALUE
+		pop ; StackCount = 15
+		pop ; StackCount = 14
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		setflag not Var11
+		pop ; StackCount = 10
+		jumpflag loc_2a94
+		pushtype BOOLEAN ; StackCount = 11
+		pushtype Pointer ; StackCount = 12
+		setptr Var12, Var1
+		pushtype TEXECWAIT ; StackCount = 13
+		assign Var13, ( Byte 1 )
+		pushtype LongInt ; StackCount = 14
+		assign Var14, ( LongInt 5 )
+		pushtype UnicodeString ; StackCount = 15
+		assign Var15, ( UnicodeString "" )
+		pushtype UnicodeString ; StackCount = 16
+		assign Var16, ( UnicodeString "/silent" )
+		pushtype UnicodeString ; StackCount = 17
+		pushtype UnicodeString ; StackCount = 18
+		assign Var18, Var3
+		pushvar Var17 ; StackCount = 19
+		call REMOVEQUOTES
+		pop ; StackCount = 18
+		pop ; StackCount = 17
+		pushvar Var11 ; StackCount = 18
+		call EXEC
+		pop ; StackCount = 17
+		pop ; StackCount = 16
+		pop ; StackCount = 15
+		pop ; StackCount = 14
+		pop ; StackCount = 13
+		pop ; StackCount = 12
+		pop ; StackCount = 11
+		pop ; StackCount = 10
+		pushtype LongInt ; StackCount = 11
+		assign Var11, ( LongInt 2000 )
+		call SLEEP
+		pop ; StackCount = 10
+	loc_2a94:
+		ret
+
+Functions[102] = external void SLEEP(out Arg1)
+
+Functions[103] = external returnsval IS64BITINSTALLMODE()
+
