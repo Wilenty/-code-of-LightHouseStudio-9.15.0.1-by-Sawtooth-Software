@@ -25,4 +25,4 @@ And then the: https://sourceforge.net/projects/innounp/files/other%20stuff/ROPS%
 
 And, then me that I can use all of the tolls, except all of the "helpers" at Inno-Forum (including you!).
 
-Your (and other) stupid messages shoud "voilate" Inno-Forum, but they are not, because all of you are a "collective of supporting each other" (along with your moderaor in the "invisible hat": @martijnlaan).
+Your (and other) stupid messages shoud "voilate" Inno-Forum, but they are not, because all of you are a "collective of supporting each other" (along with your moderaor in the "invisible hat": [Martijn Laan](https://github.com/martijnlaan)).
