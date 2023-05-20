@@ -16,13 +16,13 @@ So, now (really) on Inno-Forum no one knows if in some installer there are some 
 
 [Gavin Lambert](https://github.com/uecasm)
 
-To be honnest I have not read crefuuly all of your messages at the InnoSetup-forum: https://groups.google.com/g/innosetup/c/wh6z4oFUAIo
+To be honest I have not read carefully all of your messages at the InnoSetup-forum: https://groups.google.com/g/innosetup/c/wh6z4oFUAIo
 but, if you accusing me to "de-compile commercial software"!
 
 For first please "accuse" the "Inno Unpacker": https://sourceforge.net/projects/innounp/
 
 And then the: https://sourceforge.net/projects/innounp/files/other%20stuff/ROPS%20Disassembler/
 
-And, then me that I can use all of the tolls, except all of the "helpers" at Inno-Forum (including you!).
+And, then me that I can use all of the tools, except all of the "helpers" at Inno-Forum (including you!).
 
 Your (and other) stupid messages shoud "voilate" Inno-Forum, but they are not, because all of you are a "collective of supporting each other" (along with your moderaor in the "invisible hat": [Martijn Laan](https://github.com/martijnlaan)).
