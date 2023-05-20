@@ -11,3 +11,18 @@ You don't know, but not: "Nobody here knows..."
 Some time ago there was one person who willing to help the "askers" on the Inno-Forum, but you (and some other "smarter" users) and the Moderator of the Inno-Forum didn't respect me at all: https://groups.google.com/g/innosetup/c/lPrRbpfxSJQ
 
 So, now (really) on Inno-Forum no one knows if in some installer there are some "custom command-line parameters", because all of You are wiser than all others!
+
+# #1
+
+[Gavin Lambert](https://github.com/uecasm)
+
+To be honnest I have not read crefuuly all of your messages at the InnoSetup-forum: https://groups.google.com/g/innosetup/c/wh6z4oFUAIo
+but, if you accusing me to "de-compile commercial software"!
+
+For first please "accuse" the "Inno Unpacker": https://sourceforge.net/projects/innounp/
+
+And then the: https://sourceforge.net/projects/innounp/files/other%20stuff/ROPS%20Disassembler/
+
+And, then me that I can use all of the tolls, except all of the "helpers" at Inno-Forum (including you!).
+
+Your (and other) stupid messages shoud "voilate" Inno-Forum, but they are not, because all of you are a "collective of supporting each other" (along with your moderaor in the "invisible hat": @martijnlaan).
